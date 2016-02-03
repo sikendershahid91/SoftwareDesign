@@ -23,6 +23,7 @@ A design that is easy to understand, easy to maintain, minimalistic (does not ha
 
 Q2. Why should design be simple?
 
+<<<<<<< b215b25e42c18fb8489b019707d250086b8949e2
 What a simple design is may be subjective. However, design should reach for simplicity, because simplicity is more maintainable than complexity. Keeping design simple would prevent high cost of fixing, which holds economic value. 
 
 Maintainable simple design prefers modulatory, raising the design value to a higher quality. When we need to implement more features, or identifying errors, modularity helps to faster pinpoint parts that needs modification. 
@@ -38,3 +39,33 @@ Recently, I had to write a code for signal processing which I chose to write in 
 When I explained my code to my peers, I spent less time explaining how this code works. They also tends to hold a better understanding of the code working better. Significant benefits came from this, as my peers used less time trying to -re-implementing, and verifying that my code idea worked as intended. Also, when I needed to search for error origins, and fixing them in the later design, I usually wasted less time to do both things.
 
 Nevertheless, I would point out simple design does not necessarily mean less the task than a complex one. My last design hold automated tasks, which were needed to be ran after the script ended. The first attempt, though larger in size, did not have these added tasks.
+=======
+design should be simple to be evaluated as more maintainable rather than a complex design. 
+
+Maintainable code is has lower cost of fix and is modular. Preventing high cost of fix and producing modular design holds economic value. 
+
+Thus simpler design are higher quality then complex design. 
+ 
+
+Q3. In your experience, from what you've seen, has there been problems with design not being simple or benefits from it being simple? Give examples of situations and impact. Discuss.
+
+No there has never been an issue with a simpler code. Usually the code at first attempt comes out to be a large clutter. 
+
+Found erasing the entire code and starting from scratch to be an inventive process as compared to initial attempt.
+
+Recently I had to write a code for signal processing which I chose to write in python. 
+
+First attempt design vs. last design the following can be observed. 
+
+First attempt hold far more variables and unnecessary use of complex algorithm, and interestingly less utilization of functional programming. 
+
+The last design much short in length, variables, and inclusion of functional programming paradigm. 
+
+Also to point out simple design does not necessarily mean less the task than complex. 
+
+My last design hold automated task which were needed to be performed after script ended which the first attempt that was larger in size did not perform.
+
+Essentially, Simple modular design allow one to fit other valuable features in design. 
+
+
+>>>>>>> questions 2 and 3 have been made more concise
