@@ -23,11 +23,11 @@ A design that is easy to understand, easy to maintain, minimalistic (does not ha
 
 Q2. Why should design be simple?
 
-What a simple design is may be subjective. However, design should reach for simplicity, because [remove up to here in this sentence] simplicity is more maintainable than complexity. Keeping design simple would prevent high cost of fixing, which holds economic value. 
+Simplicity is more maintainable than complexity. Keeping design simple would prevent high cost of fixing, which holds economic value. 
 
-Maintainable simple design prefers modulatory, raising the design value to a higher quality. When we need to implement more features, or identifying [identify] errors, modularity helps to faster [quickly] pinpoint parts that needs modification. 
+Maintainable simple design prefers modulatory, raising the design value to a higher quality. When we need to implement more features, or identify errors, modularity helps to quickly pinpoint parts that needs modification. 
 
-Furthermore, simple design allows people to understand the code quicker, more accurately [correctly]. When explaining the code to your peers, this feature helps a lot [and saves time?].
+Furthermore, simple design allows people to understand the code quicker, more correctly. When explaining the code to your peers, this feature helps a lot and saves time.
 
 Q3. In your experience, from what you've seen, has there been problems with design not being simple or benefits from it being simple? Give examples of situations and impact. Discuss.
 
