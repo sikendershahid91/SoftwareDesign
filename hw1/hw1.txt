@@ -25,9 +25,9 @@ Q2. Why should design be simple?
 
 Simplicity is more maintainable than complexity. Keeping design simple would prevent high cost of fixing, which holds economic value. 
 
-Maintainable simple design prefers modulatory, raising the design value to a higher quality. When we need to implement more features, or identify errors, modularity helps to quickly pinpoint parts that needs modification. 
+Maintainable simple design prefers modular design, Which raises the design value to a higher quality. When we need to implement more features or identify errors, modularity helps to quickly pinpoint parts that needs modification. 
 
-Furthermore, simple design allows people to understand the code quicker, more correctly. When explaining the code to your peers, this feature helps a lot and saves time.
+Furthermore, simple design allows people to understand the code quicker and more correctly. When explaining the code to your peers or team, this feature helps a lot by saving ample time.
 
 Q3. In your experience, from what you've seen, has there been problems with design not being simple or benefits from it being simple? Give examples of situations and impact. Discuss.
 
