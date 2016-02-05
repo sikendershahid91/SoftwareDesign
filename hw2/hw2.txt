@@ -1,0 +1,42 @@
+HW2: Due 11:59PM February 12
+
+In this homework we'll create a strategic design for a version of the Mastermind game <https://en.wikipedia.org/wiki/Mastermind_(board_game)>.
+
+There is no coding involved in this homework. Discuss your design ideas in this file and also visualize your design.
+
+The modified version of the game is described here:
+
+At the start of the game, the program chooses five colors from a pool of ten colors. There may be duplicate in the selected colors. The object of the game is for the player to guess the colors chosen. A player has 20 chances to make the correct guess.
+
+After a user selects five colors, they can ask their entry to be evaluated.
+
+The response by the program is also in colors. A white response means a miss. A black response means a perfect match at one of the positions. A silver response means there was a match of a color, but not in the correct position. The responses are ordered so all the white responses, if any, appear first, then the silver responses, if any, and then the black responses, if any.
+
+Let's look at a few examples.
+
+Assume the program selected the following combination of colors:
+
+Red Green Yellow Red Blue
+
+Here are some examples of a player's inputs and the responses from the program:
+
+User input												  Program Response
+Purple Orange Cyan Black White			White White White White White
+Red Green Yellow Blue Black					White Silver Black Black Black
+Red Green Yellow Red Yellow         White Black Black Black Black
+
+The program will not display colors as string, but will show the actual colors on the UI instead.
+
+The game ends when the user makes the correct guess, gives up, or runs out of the moves. When the game ends, the colors chosen by the program are displayed in full view for the player to see.
+
+1. Discuss the high level design ideas for this program. Discuss the classes you'd create and the purpose of each one of them. Discuss different parts of the program and their responsibilities. List any assumptions you make.
+
+REPLACE THIS WITH YOUR RESPONSE
+
+2. Visualize the design, show the classes and their relationships.
+
+It's perfectly OK to hand draw and take a snap of sketch using your smartphones. If you plan to use a tool, that's fine too, and you may save the files created by the tool in the hw2 directory. However, only files that are in pdf, jpeg, or png format will be reviewed.
+
+3. What programming language would you recommend using for this program? Are there specific libraries or tools that you would recommend in addition to the language.
+
+REPLACE THIS WITH YOUR RESPONSE
