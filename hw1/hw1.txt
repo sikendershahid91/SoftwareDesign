@@ -25,15 +25,15 @@ Q2. Why should design be simple?
 
 Simplicity is more maintainable than complexity. Keeping design simple would prevent high cost of fixing, which holds economic value. 
 
-Maintainable simple design prefers modular design, Which raises the design value to a higher quality. When we need to implement more features or identify errors, modularity helps to quickly pinpoint parts that needs modification. 
+Maintainable simple design prefers modular design, which raises the design value to a higher quality. When we need to implement more features or identify errors, modularity helps to quickly pinpoint parts that needs modification. 
 
 Furthermore, simple design allows people to understand the code quicker and more correctly. When explaining the code to your peers or team, this feature helps a lot by saving ample time.
 
 Q3. In your experience, from what you've seen, has there been problems with design not being simple or benefits from it being simple? Give examples of situations and impact. Discuss.
 
-There have been issues with designs not being simple. Usually, the first-attempt of the code comes out to be cluttered. I found erasing the entire code, and starting from scratch to be more productive. It has been better than continuously trying to modify the starting design.
+There have been issues with designs not being simple. Usually, the first-attempt of the code comes out to be cluttered. I found erasing the entire code, and starting from scratch to be more productive. It was better than continuously trying to modify the starting design.
 
-Recently, I had to write a code for signal processing in python. Going from first design to the last, the following can be observed. First-attempt holds far more variables, with random obscure names. There were also unnecessary complex algorithm, and little utilization of functional programming. In comparison, the last design is much shorter in length, with fewer yet more meaningful variables. The names gave a better sense of what the variables should do. Furthermore, the last design showed a heavier use of functional programming paradigm, which contributed to shortened length.  
+Recently, I had to write a code for signal processing in python. Going from first design to the last, the following can be observed. First-attempt holds far more variables, with random obscure names. There were also unnecessary complex algorithm, and little utilization of functional programming. In comparison, the last design is much shorter in length, with fewer yet more meaningful variables. The names gave a better sense of what the variables should do. Furthermore, the last design showed a heavier use of functional programming paradigm, which contributed to the shortened length.  
 
-When showing the code to my team, I spent less time explaining how this code worked. This is because the code documents the design, thus allowing my team to hold a better understanding of how the code functions. Significant benefits came from this. My team used less time trying to make sense of the code. Minimal time was needed to verify that if my algorithm worked. Error which occurred in hindsight, little to no time was required to fix them. My team would then proceed in starting implementation of that code.
+When showing the code to my team, I spent less time explaining how this code worked. This is because the code documents the design. Thus my team held a better understanding of how the code functioned. Significant benefits came from this. My team used less time trying to make sense of the code. Minimal time was needed to verify if my algorithm worked. For errors occurring in hindsight, little to no time was required to fix them. By then, my team could quickly proceed to further implementation of that code.
 
