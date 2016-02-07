@@ -49,4 +49,4 @@ It's perfectly OK to hand draw and take a snap of sketch using your smartphones.
 
 3. What programming language would you recommend using for this program? Are there specific libraries or tools that you would recommend in addition to the language.
 
-I would recommend C++ since I used it to build a GraphicEngine previously. It has some good libraries that can handle graphic, and interactive UI fairly simple. GLFW is library that builds upon OpenGL that I used previously. I think it will be enough in this case.
+I would recommend C++ since I used it to build a GraphicEngine previously. It has some good libraries that can handle graphic, and interactive UI fairly simple. GLFW is library that builds upon OpenGL that I tried. I think it will be enough in this case. Qt is another thing I heard good things about, but have not used before.
