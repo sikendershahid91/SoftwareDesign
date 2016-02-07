@@ -37,5 +37,5 @@ Recently, I had to write a code for signal processing in python. Going from firs
 
 When showing the code to my team, I spent less time explaining how this code worked. This is because the code documents the design. Thus my team held a better understanding of how the code functioned. Significant benefits came from this. My team used less time trying to make sense of the code. Minimal time was needed to verify if my algorithm worked. For errors occurring in hindsight, little to no time was required to fix them. By then, my team could quickly proceed to further implementation of that code.
 
-Grading:
-Waiting for response to <https://groups.google.com/d/msg/uhcss16sd/z_bULCZEtVo/qoYO3kyiDwAJ> from Nguyen Shahid
+Total [10]: 10
+
