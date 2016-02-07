@@ -31,7 +31,17 @@ The game ends when the user makes the correct guess, gives up, or runs out of th
 
 1. Discuss the high level design ideas for this program. Discuss the classes you'd create and the purpose of each one of them. Discuss different parts of the program and their responsibilities. List any assumptions you make.
 
-REPLACE THIS WITH YOUR RESPONSE
+I would create several classes as followed:
+	- Color class: containing color name string, and its associating color hexcode.
+	- ColorSelection class: containin an ordered list of 5 colors. Will be used to represent our program's color selections, user input, and also program responses. 
+	- ColorPool class: containing a the pool of color, and has a random generator method of ColorSelection of selected length.
+	- GameEngine class: main core of the game. It has responsibilities to start the game with a ColorSelection, keep count of how the users doing, and a method convert to user input into program response.
+	- GraphicGameEngine class: interactive UI engine of the game. It displays program color's pool. User clicks on color to input, and program also display what the user has chosen. When done, program shows response. It would be based on GameEngine class by using inheritance.
+
+I assumed several things:
+	- User knows the rules the game fairly well. Example: They know there can be duplicate colors. I do not have to explain to them what the program response means.
+	- The pool of colors does not contain white, black, or silver. I think it will be confusing for users.
+	- I do not have to deal with complicated UI details right now. Like a feature where I have to be able to show previous user inputs and program responses. Or how exactly should I show the color pools: in filled circles, or squares.
 
 2. Visualize the design, show the classes and their relationships.
 
@@ -39,4 +49,4 @@ It's perfectly OK to hand draw and take a snap of sketch using your smartphones.
 
 3. What programming language would you recommend using for this program? Are there specific libraries or tools that you would recommend in addition to the language.
 
-REPLACE THIS WITH YOUR RESPONSE
+I would recommend C++ since I used it to build a GraphicEngine previously. It has some good libraries that can handle graphic, and interactive UI fairly simple. GLFW is library that builds upon OpenGL that I used previously. I think it will be enough in this case.
