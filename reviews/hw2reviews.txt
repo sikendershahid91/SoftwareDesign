@@ -1,0 +1,17 @@
+[Venkat 02/08/16 12:24 PM CET]
+synopsis: start with an overview and write in short paragraphs 
+
+details:
+
+Why "I", this should be a joint work with your partner.
+
+1.
+Write in short paragraphs. Start with an overview and mention any assumptions. Then discuss the overall design approach and reasons to take that approach. Then present the details of each of the major classes.
+
+2.
+Show UML class diagram.
+
+3.
+OK
+
+------------------------------------------------------------------------------
