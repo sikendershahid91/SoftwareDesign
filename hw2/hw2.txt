@@ -31,17 +31,27 @@ The game ends when the user makes the correct guess, gives up, or runs out of th
 
 1. Discuss the high level design ideas for this program. Discuss the classes you'd create and the purpose of each one of them. Discuss different parts of the program and their responsibilities. List any assumptions you make.
 
-I would create several classes as followed:
-	- Color class: containing color name string, and its associating color hexcode.
-	- ColorSelection class: containin an ordered list of 5 colors. Will be used to represent our program's color selections, user input, and also program responses. 
-	- ColorPool class: containing a the pool of color, and has a random generator method of ColorSelection of selected length.
-	- GameEngine class: main core of the game. It has responsibilities to start the game with a ColorSelection, keep count of how the users doing, and a method convert to user input into program response.
-	- GraphicGameEngine class: interactive UI engine of the game. It displays program color's pool. User clicks on color to input, and program also display what the user has chosen. When done, program shows response. It would be based on GameEngine class by using inheritance.
+We start this game design by analysing the descriptions above. The most important aspect is a proper matching algorithm for user input. There are tricky situations. For example: there is only one red color in program's selection, and two red colors in input. If both reds are in wrong positions, will the second red be a white or a silver? We assume, in this case, it would be a white.
 
-I assumed several things:
-	- User knows the rules the game fairly well. Example: They know there can be duplicate colors. I do not have to explain to them what the program response means.
-	- The pool of colors does not contain white, black, or silver. I think it will be confusing for users.
-	- I do not have to deal with complicated UI details right now. Like a feature where I have to be able to show previous user inputs and program responses. Or how exactly should I show the color pools: in filled circles, or squares.
+An important design assumption is that the user knows the game's rules fairly well. If not the case, we need to revise the design to how to educate the users the rules.
+
+For the classes design, we select objects that comes naturally from descriptions. For example, colors are an important aspect, mentioned many times. Therefore, we think there should be a "Color" object.
+
+For now, we create simple classes that deal withs graphic output and input. Three classes comes from the Model-View-Controller pattern. This pattern seems easy and simple enough to implement. However, we assume the UI display and input controller details are not needed now.
+
+From these assumptions, we created the first Color class. It will contains the color's name string, and its associating RGBvalue. It helps the UI to display the color. Also, we assume the color RGB value does not need to conform to a strict standard. We can define color "Green Orange" and its RGB value is "1 1 25".
+
+Secondly, in descriptions, an ordered list of 5 colors is ubiquitous, and valuable. Therefore, we made ColorSelection class. This class contains a list of colors, with its length set to be a contant 5. This class will represent the program's selection, user input, and response.
+
+The pool of colors also need its natural representation inside the program. ColorPool class address this. ColorPool also has a list of colors, with its length being a constant 10. An important method inside this class will be a generator that output a random ColorSelection. This method will create the program's selection.
+
+The Model-View-Controller pattern gives us an idea to create 3 main classes: GameEngine, GraphicView, and Controller. 
+
+GameEngine handles the game state, and keep count of how the user is doing. The Match method inside is the most important. It takes in the user input, and program's selection. Its output will be the program response. The class itself stores the color pool, the color selections, and amount of chances left.
+
+GraphicView handles the UI output, and will be manipulated by GameEngine class state. There are several variations to how this class will work. Most likely, it need to show the pool of 10 colors, user's current input, and program response. We assume the display details are not needed. 
+
+Controller task is to take in the user's input. Then it updates the GameEngine state.
 
 2. Visualize the design, show the classes and their relationships.
 
