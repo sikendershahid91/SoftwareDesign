@@ -37,11 +37,11 @@ An important design assumption is that the user knows the game's rules fairly we
 
 For the classes design, we select objects that comes naturally from descriptions. For example, colors are an important aspect, mentioned many times. Therefore, we think there should be a "Color" object.
 
-For now, we create simple classes that deal withs graphic output and input. Three classes comes from the Model-View-Controller pattern. This pattern seems easy and simple enough to implement. However, we assume the UI display and input controller details are not needed now.
+For now, we create simple classes that deal {withs}[with] graphic output and input. Three classes comes from the Model-View-Controller pattern. This pattern seems easy and simple enough to implement. However, we assume the UI display and input controller details are not needed now.
 
 From these assumptions, we created the first Color class. It will contains the color's name string, and its associating RGBvalue. It helps the UI to display the color. Also, we assume the color RGB value does not need to conform to a strict standard. We can define color "Green Orange" and its RGB value is "1 1 25".
 
-Secondly, in descriptions, an ordered list of 5 colors is ubiquitous, and valuable. Therefore, we made ColorSelection class. This class contains a list of colors, with its length set to be a contant 5. This class will represent the program's selection, user input, and response.
+Secondly, in descriptions, an ordered list of 5 colors is ubiquitous, and valuable. Therefore, we made ColorSelection class. This class contains a list of colors, with its length set to be a contant [sp] 5. This class will represent the program's selection, user input, and response.
 
 The pool of colors also need its natural representation inside the program. ColorPool class address this. ColorPool also has a list of colors, with its length being a constant 10. An important method inside this class will be a generator that output a random ColorSelection. This method will create the program's selection.
 

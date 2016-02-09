@@ -1,3 +1,16 @@
+[Venkat 02/10/16 04:46 AM IST]
+synopsis: give GUI layout details in 1, reduce in 2. 
+
+details:
+1.
+Good details.
+
+Discuss the layout of the GUI here at the end of part 1.
+
+2.
+Reduce details in the diagram. Show only the most important high level details, mainly class names and how they're related to one another.
+
+------------------------------------------------------------------------------
 [Venkat 02/08/16 12:24 PM CET]
 synopsis: start with an overview and write in short paragraphs 
 
