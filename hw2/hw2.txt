@@ -55,7 +55,9 @@ Controller task is to take in the user's input. Then it updates the GameEngine s
 
 The Highlight of the GUI.
 
-There will be three main panels for the simplicity. One larger rectangular panel on the left hand side which will be extending vertically will display the 10 colors from the colorSelection. The user panel will be centered bottom extending horizontally. This panel will display 10 empty boxes. User may click a box letting it be highlighted, which will allow for the user to then select a color from the colorSelection pool
+There will be three main panels on the grapical user interface. One larger rectangular panel on the left hand side which will be extending vertically will display the 10 colors from the colorPool. The user panel will be centered bottom extending horizontally. This panel will display 5 empty boxes. User may click a box letting it be highlighted, which will allow for the user to then select a color from the colorPool. The user may choose to enter the 5 main colors in any order for any position. After selecting the 5 color the program will automatically proceed with the matching the input to the computer's color sequeuence.
+
+On the top will center will be a panel extending horizontally, which will display the response for the color sequence entered. If the sequence is wrong the user may choose to restart the game or exit the game anytime. The were will be only a certain number the user can attempt try's to break the code. The gameEngine class will keep the count of the attempts made. Once the attempt limit has been reached the game will notify the user and exit the game. The notification prompts will be executed by the graphicView class. 
 
 
 2. Visualize the design, show the classes and their relationships.
