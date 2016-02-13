@@ -37,28 +37,25 @@ An important design assumption is that the user knows the game's rules fairly we
 
 For the classes design, we select objects that comes naturally from descriptions. For example, colors are an important aspect, mentioned many times. Therefore, we think there should be a "Color" object.
 
-For now, we create simple classes that deals with graphic output and input. Three classes comes from the Model-View-Controller pattern. This pattern seems easy and simple enough to implement. However, we assume the UI display and input controller details are not needed now.
+For now, we create simple classes that deals with graphic output and input. Three classes comes from the Model-View-Controller pattern. This pattern seems easy and simple enough to implement.
 
-From these assumptions, we created the first Color class. It will contains the color's name string, and it’s associating RGBvalue. It helps the UI to display the color. Also, we assume the color RGB value does not need to conform to a strict standard. We can define color "Green Orange" and its RGB value is "1 1 25".
+From these assumptions, we created the first Color class. It will contains the color's name string, and its associating RGBvalue. It helps the UI to display the color. Also, we assume the color RGB value does not need to conform to a strict standard. We can define color "Green Orange" and its RGB value is "1 1 25".
 
-Secondly, in descriptions, an ordered list of 5 colors is ubiquitous, and valuable. Therefore, we made ColorSelection class. This class contains a list of colors, with its length set to be a contant [sp] 5. This class will represent the program's selection, user input, and response.
+Secondly, in descriptions, an ordered list of 5 colors is ubiquitous, and valuable. Therefore, we made ColorSelection class. This class contains a list of colors, with its length set to be a constant 5. This class will represent the program's selection, user input, and response.
 
-The pool of colors also need its natural representation inside the program. ColorPool class address this. ColorPool also has a list of colors, with its length being a constant 10. An important method inside this class will be a generator that output a random ColorSelection. This method chooses 5 colors from the pool to make a ClassSelection instance. This method will create the program's 5 color selection.
+The pool of colors also need its natural representation inside the program. ColorPool class address this. ColorPool also has a list of colors, with its length being a constant 10. An important method inside this class will be a ColorSelection random generator. This method chooses 5 colors from the pool to make a ClassSelection instance. This program will use this method to choose color selection for each game.
  
 The Model-View-Controller pattern gives us 3 of the following classes: GameEngine, GraphicView, and InputController, respectively. 
 
-GameEngine handles the game state, and keep count of how the user is doing. The Match method inside is the most important. It takes in the user input, and program's selection. Its output will be the program response. The class itself stores the color pool, the color selections, and amount of chances left.
+GameEngine handles the game state, and keep count of how the user is doing. The most important is the match method inside. It takes in the user input, and program's selection. It will output be the program response. The GameEngine class itself stores the color pool, the color selections, and amount of chances left.
 
-GraphicView handles the UI output, and will be manipulated by GameEngine class state. There are several variations to how this class will work. Most likely, it need to show the pool of 10 colors, user's current input, and program response. We assume the display details are not needed. 
+GraphicView handles the UI output, and will be manipulated by GameEngine class state. There are several variations to how this class will work. Most essentially, it need to show the pool of 10 colors, user's current input, and program response.
 
 Controller task is to take in the user's input. Then it updates the GameEngine state.
 
-The Highlight of the GUI.
+For the GUI, there will be three main panels on the main window. One large rectangular panel stays on the left hand side. It displays the 10 colors from the colorPool vertically. The user input panel is placed at bottom center, extending horizontally. This panel contains a row of 5 empty boxes. User clicks on a box to highlight, then choose a color from the pool. User may change his answer as he likes. When all 5 boxes are filled, a 'Done' button on the left is enabled. Clicking on the button commands the program to match the user input to the computer selection.
 
-There will be three main panels on the grapical user interface. One larger rectangular panel on the left hand side which will be extending vertically will display the 10 colors from the colorPool. The user panel will be centered bottom extending horizontally. This panel will display 5 empty boxes. User may click a box letting it be highlighted, which will allow for the user to then select a color from the colorPool. The user may choose to enter the 5 main colors in any order for any position. After selecting the 5 color the program will automatically proceed with the matching the input to the computer's color sequeuence.
-
-On the top will center will be a panel extending horizontally, which will display the response for the color sequence entered. If the sequence is wrong the user may choose to restart the game or exit the game anytime. The were will be only a certain number the user can attempt try's to break the code. The gameEngine class will keep the count of the attempts made. Once the attempt limit has been reached the game will notify the user and exit the game. The notification prompts will be executed by the graphicView class. 
-
+On the top center will be another panel extending horizontally, also containing 5 boxes. Once the matching is done, the program response will be displayed here. Throughout the game, the user may choose to either exit, or work on another sequence of colors anytime. Nevertheless, there will only 20 allowed attempts to crack a sequence. The gameEngine class keeps the count of the attempts made. Once the limit has been reached, the game will notify the user and stop the game. The notification prompts will be executed by the graphicView class. 
 
 2. Visualize the design, show the classes and their relationships.
 
