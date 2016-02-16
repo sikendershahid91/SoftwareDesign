@@ -1,0 +1,19 @@
+Tasks for which test cases will be written for. 
+--------------------------------------------------------------------------------
+1. When game starts check for 20 chances remaining. 
+2. Check if colorPool contains 10 different colors. 
+3. Box is highlighted after being clicked. 
+4. Confirm computer's colorSelection contains 5 random generated from colorPool. 
+5. Response colorSelection containing only 3 of the followign colors: Silver, White, and Black. 
+6. match function validating the input colors and output response colors. 
+7. After performing a click operation on the colorPool, the color transfered to designated location. 
+8. Correct input displaying 5 black colors on the response colorSelection.
+9. The colors need to be placed in appropriate bounds during the start to end of game. 
+10. Failure notifications after 20 trials. Successful notification after win.
+
+
+Question: 
+
+Hey Venkat,
+Are these the steps we should be taking?
+ 
