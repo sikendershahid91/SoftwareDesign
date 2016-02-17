@@ -1,3 +1,33 @@
+[Venkat 02/17/16 09:09 AM MST]
+synopsis: let's focus on the most important things first 
+
+details:
+*** Start with a canary test. If you don't know what a canary test is,
+see the TDD videos.
+
+Delete everything and start over. We will start with a focus on the most important things first.
+
+Write a test where all colors match.
+call a function setSelection and send five different colors.
+Then call a function guess and send the same colors.
+Check that the response from the guess function has five black colors.
+Write minimum code to make this test pass.
+
+Now, write a test where all colors don't match.
+Keep the same colors as in the previous test.
+Send to guess five different colors that are not in the selected colors.
+verify the response is all white colors.
+
+Change the name of the test class to CodeBreakerTest. Change the name of the
+class to CodeBreaker.
+
+After you have minimum code to pass the two tests plus the canary test, ask for review.
+
+I've created a build file to run the tests from the command prompt.
+Type paver to run the tests and make sure all tests are passing before
+checking in any code change.
+
+------------------------------------------------------------------------------
 [Venkat 02/16/16 06:40 AM EST]
 synopsis: start with a canary test 
 
