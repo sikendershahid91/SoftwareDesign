@@ -1,3 +1,36 @@
+[Venkat 02/21/16 11:29 AM GMT]
+synopsis: let's program with intention. 
+
+details:
+ColorSelection: Remove
+
+TestCases: Remove this test class.
+
+CodeSelectionTest: Remove this test class.
+
+At this time of the design we only need one test class and one class, nothing more.
+
+CodeBreakerTest:
+tearDown: Remove
+
+test_new_game_has_20_chances: Remove
+
+
+test_game_return_5_blacks_for_correct_guess:
+Instead of string, can we use enum for colors.
+Instead of string 'Black' can we program with intention and use a values like MATCH_POSITION, NOMATCH, MATCH, for example?
+
+Write positive and negative tests for guess. Think of situations like:
+1. all colors in guess match by position with selected colors
+2. no colors in guess are present in the selected colors
+3. all colors in guess are in selected colors, but none in correct position
+4. some colors in the guess match by position, some match but not in position, some are not in the selected colors
+5. guess uses a color twice when the selection has no repeated colors
+6. guess uses a color twice where one of them matches the selection by position and the other matches but not in position
+7. guess uses a color twice and they match selection in place
+8. guess has few colors than five
+
+------------------------------------------------------------------------------
 [Venkat 02/17/16 09:09 AM MST]
 synopsis: let's focus on the most important things first 
 
