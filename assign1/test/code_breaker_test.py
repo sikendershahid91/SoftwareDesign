@@ -1,22 +1,6 @@
 import unittest
 from src.code_breaker import CodeBreaker, Color, Response
 
-
-
-### so essentially the idea for creating the TDD is to create bit of test then bit of implementation. 
-### we want to be testing much more behavior than state of right or wrong. 
-### starting from the base would assist in structuring the program 
-
-### example of test 
-	### canary, running program - checking environment
-	### checkIfplayerIsSet
-		### assertTrue(true) case 
-	### checkIfcolorPoolcontains10colors 
-		### this should help us create a colorPoolClass with stack of 10 colors. 
-	### test, pick color place on selection
-	
-	### aand we can add plenty of negative, exception tests to those postive tests above. YEA FEEL ME DAWG 
-
 class CodeBreakerTest(unittest.TestCase):
 	def test_canary(self):
 		self.assertTrue(True)
