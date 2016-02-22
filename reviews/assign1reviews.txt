@@ -1,3 +1,35 @@
+[Venkat 02/22/16 05:39 AM GMT]
+synopsis: fix and move forward. 
+
+details:
+Wow, comments in code. Remove all comments. Instead write readable code.
+
+test_set_selection_with_less_than_5_colors: Remove
+
+test_set_selection_with_more_than_5_colors: Remove
+
+test_set_selection_with_variable_wrong_type: Remove
+
+test_guess_with_less_than_5_colors: Keep
+
+"guess accepts less than 5 colors" should this read "guess does not accepts less than 5 colors"?
+
+test_guess_with_more_than_5_colors: Keep
+
+### irrelevent  - Remove comments in code.
+
+test_guess_with_variable_wrong_type: Remove
+
+test_guess_while_selection_not_set: Remove
+
+test_game_all_match_for_correct_guess:
+The \ at the end of lines are noisy. Let's remove them.
+
+The function setSelection is a helper function, no need to write tests for these. The purpose of this function is to get us to verify the behavior of the guess function.
+
+After fixing the above, move on to test various scenarios of guess, with different combinations. After that move on to write tests for the color selection function (not setSelection). Then test for the number of tries a player is allowed.
+
+------------------------------------------------------------------------------
 [Venkat 02/21/16 11:29 AM GMT]
 synopsis: let's program with intention. 
 
