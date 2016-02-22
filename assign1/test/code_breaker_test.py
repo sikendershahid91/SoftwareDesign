@@ -1,6 +1,22 @@
 import unittest
 from src.code_breaker import CodeBreaker, Color, Response
 
+
+
+### so essentially the idea for creating the TDD is to create bit of test then bit of implementation. 
+### we want to be testing much more behavior than state of right or wrong. 
+### starting from the base would assist in structuring the program 
+
+### example of test 
+	### canary, running program - checking environment
+	### checkIfplayerIsSet
+		### assertTrue(true) case 
+	### checkIfcolorPoolcontains10colors 
+		### this should help us create a colorPoolClass with stack of 10 colors. 
+	### test, pick color place on selection
+	
+	### aand we can add plenty of negative, exception tests to those postive tests above. YEA FEEL ME DAWG 
+
 class CodeBreakerTest(unittest.TestCase):
 	def test_canary(self):
 		self.assertTrue(True)
@@ -57,7 +73,7 @@ class CodeBreakerTest(unittest.TestCase):
 			raise RuntimeError("guess accepts more than 5 colors.")
 		except ValueError:
 			pass
-
+	### irrelevent 
 	def test_guess_with_variable_wrong_type(self):
 		selection_set = [Color.black] * 5
 		selection_guess = [Color.white] * 4
@@ -68,7 +84,7 @@ class CodeBreakerTest(unittest.TestCase):
 			raise RuntimeError("guess accepts one variable wrong type.")
 		except ValueError:
 			pass
-
+	
 	def test_guess_while_selection_not_set(self):
 		selection_guess = [Color.white] * 5
 		try:
