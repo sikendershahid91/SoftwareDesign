@@ -24,6 +24,12 @@ class CodeBreaker():
     def __init__(self):
         self.selected_colors = []
         self.response = []
+        self.number_of_chances_left = 20
+
+    @staticmethod
+    def _check_type_color(input_color):
+        if type(input_color) != Color:
+            raise (ValueError("Not true color type."))
 
     @staticmethod
     def _check_color_selection_type(input_selection):
@@ -35,7 +41,7 @@ class CodeBreaker():
         self._check_color_selection_type(input_selection)
         self.selected_colors = input_selection
 
-    def evaluate_guess(self, input_guess):
+    def match(self, input_guess):
         self._check_color_selection_type(input_guess)
         self.response = []
         left_over_selection_color = []
@@ -55,6 +61,12 @@ class CodeBreaker():
         self.response.sort(key=lambda x: x.value)
         return self.response
 
-    def select_color(self, param):
+    def guess(self, input_guess):
+        self.number_of_chances_left -= 1
+        if self.number_of_chances_left < 0:
+            raise ValueError
+        return self.match(input_guess)
+
+    def color_selection(self, param):
+        self._check_type_color(param)
         self.selected_colors.append(param)
-        return self.selected_colors[0]
