@@ -23,16 +23,16 @@ class Response(Enum):
 class CodeBreaker():
     def __init__(self):
         self.selected_colors = []
-        self.response = []
+        self.response = [] #Venkat: Remove from the class
         self.number_of_chances_left = 20
 
-    @staticmethod
-    def _check_type_color(input_color):
+    @staticmethod #Venkat: static is not a good idea. Make these instance methods
+    def _check_type_color(input_color): #Venkat: Remove
         if type(input_color) != Color:
             raise (ValueError("Not true color type."))
 
     @staticmethod
-    def _check_color_selection_type(input_selection):
+    def _check_color_selection_type(input_selection):  #Venkat: Remove
         if len(input_selection) != 5:
             raise (ValueError('Not exactly 5 colors.'))
         return
@@ -61,12 +61,12 @@ class CodeBreaker():
         self.response.sort(key=lambda x: x.value)
         return self.response
 
-    def guess(self, input_guess):
+    def guess(self, input_guess): #Venkat: Remove
         self.number_of_chances_left -= 1
         if self.number_of_chances_left < 0:
             raise ValueError
         return self.match(input_guess)
 
-    def color_selection(self, param):
+    def color_selection(self, param):  #Venkat: Remove
         self._check_type_color(param)
         self.selected_colors.append(param)

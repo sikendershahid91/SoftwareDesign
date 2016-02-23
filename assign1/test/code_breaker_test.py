@@ -8,15 +8,16 @@ class CodeBreakerTest(unittest.TestCase):
 
     def setUp(self):
         self.codeBreaker = CodeBreaker()
-
-    def select_first_color(self):
+        #Venkat: right here call select_colors(...with 5 parameters...)
+        
+    def select_first_color(self): #Venkat: Remove this test
         self.codeBreaker.color_selection(Color.black)
         self.assertEqual(Color.black, self.codeBreaker.selected_colors[0])
 
     def test_guess_less_than_5_selection(self):
-        self.codeBreaker.color_selection(Color.black)
-        self.codeBreaker.color_selection(Color.white)
-        self.codeBreaker.color_selection(Color.silver)
+        self.codeBreaker.color_selection(Color.black) #Venkat: Remove
+        self.codeBreaker.color_selection(Color.white) #Venkat: Remove
+        self.codeBreaker.color_selection(Color.silver) #Venkat: Remove
         try:
             self.codeBreaker.guess(self.codeBreaker.selected_colors)
             raise RuntimeError("guess accepts less than 5 colors.")

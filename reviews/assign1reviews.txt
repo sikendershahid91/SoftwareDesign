@@ -1,3 +1,23 @@
+[Venkat 02/23/16 06:27 AM GMT]
+synopsis: reduce a lot 
+
+details:
+Let's reduce a lot of code.
+
+At this time we only need two methods, one to set colors (let's call it set_colors_selection) and one to guess or match colors (let's call it guess_colors). We don't need much code. Let set_colors_selection take an array or a list and set it. Let guess taken array or a list and return the result of comparison. Don't bring in any other functions at this time.
+
+****** Use an enum for colors, do not use a string.
+test_guess_more_than_20_chances_for_a_game:
+This one is quite complex. Rewrite it like so:
+set number of tries to 20 on the instance.
+Then call guess with a perfect match and ensure the game is not reported to be a win.
+Then write a test where guess with a perfect match reports a win (when number of tries has not been set to 20).
+
+Avoid for loops in test.
+
+test_guess_20: What does that mean, tells us what this test is expecting.
+
+------------------------------------------------------------------------------
 [Venkat 02/22/16 05:39 AM GMT]
 synopsis: fix and move forward. 
 
