@@ -15,15 +15,15 @@ class Color(Enum):
 
 
 class Response(Enum):
-    MATCH_POSITION = 0
+    MATCH_POSITION = 2
     MATCH = 1
-    NO_MATCH = 2
+    NO_MATCH = 0
 
 
 class CodeBreaker():
     def __init__(self):
         self.selected_colors = []
-        self.chances_left = 20
+        self.response = []
 
     @staticmethod
     def _check_color_selection_type(input_selection):
@@ -37,12 +37,23 @@ class CodeBreaker():
 
     def evaluate_guess(self, input_guess):
         self._check_color_selection_type(input_guess)
-        if self.selected_colors != input_guess:
-            key_sort_func = lambda x: x.value
-            if sorted(self.selected_colors, key=key_sort_func) == sorted(input_guess, key=key_sort_func):
-                return [Response.MATCH] * 5
-            return [Response.NO_MATCH] * 5
-        return [Response.MATCH_POSITION] * 5
+        self.response = []
+        left_over_selection_color = []
+        left_over_guess_color = []
+        for i in range(5):
+            if self.selected_colors[i] == input_guess[i]:
+                self.response.append(Response.MATCH_POSITION)
+            else:
+                left_over_selection_color.append(self.selected_colors[i])
+                left_over_guess_color.append(input_guess[i])
+        for color in left_over_guess_color:
+            if color in left_over_selection_color:
+                self.response.append(Response.MATCH)
+                left_over_selection_color.remove(color)
+            else:
+                self.response.append(Response.NO_MATCH)
+        self.response.sort(key=lambda x: x.value)
+        return self.response
 
     def select_color(self, param):
         self.selected_colors.append(param)
