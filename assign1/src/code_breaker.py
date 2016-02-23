@@ -15,8 +15,8 @@ class Color(Enum):
 
 
 class Response(Enum):
-    MATCH = 0
-    MATCH_POSITION = 1
+    MATCH_POSITION = 0
+    MATCH = 1
     NO_MATCH = 2
 
 
@@ -40,9 +40,9 @@ class CodeBreaker():
         if self.selected_colors != input_guess:
             key_sort_func = lambda x: x.value
             if sorted(self.selected_colors, key=key_sort_func) == sorted(input_guess, key=key_sort_func):
-                return [Response.MATCH_POSITION] * 5
+                return [Response.MATCH] * 5
             return [Response.NO_MATCH] * 5
-        return [Response.MATCH] * 5
+        return [Response.MATCH_POSITION] * 5
 
     def select_color(self, param):
         self.selected_colors.append(param)

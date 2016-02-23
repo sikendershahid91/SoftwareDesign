@@ -34,7 +34,7 @@ class CodeBreakerTest(unittest.TestCase):
     def test_all_match_for_correct_guess(self):
         selection_set = [Color.pink, Color.red, Color.green, Color.blue, Color.orange]
         self.codeBreaker.set_selected_colors(selection_set)
-        self.assertEqual([Response.MATCH] * 5, self.codeBreaker.evaluate_guess(selection_set))
+        self.assertEqual([Response.MATCH_POSITION] * 5, self.codeBreaker.evaluate_guess(selection_set))
 
     def test_game_all_no_match_for_all_different_colors(self):
         selection_set = [Color.pink, Color.red, Color.green, Color.blue, Color.orange]
@@ -46,4 +46,6 @@ class CodeBreakerTest(unittest.TestCase):
         selection_set = [Color.pink, Color.red, Color.green, Color.blue, Color.orange]
         self.codeBreaker.set_selected_colors(selection_set)
         selection_guess = [Color.red, Color.green, Color.blue, Color.orange, Color.pink]
-        self.assertEqual([Response.MATCH_POSITION] * 5, self.codeBreaker.evaluate_guess(selection_guess))
+        self.assertEqual([Response.MATCH] * 5, self.codeBreaker.evaluate_guess(selection_guess))
+
+
