@@ -15,9 +15,9 @@ class Color(Enum):
 
 
 class Response(Enum):
-    MATCH_POSITION = 0
+    NO_MATCH = 0
     MATCH = 1
-    NO_MATCH = 2
+    MATCH_POSITION = 2
 
 
 class Status(Enum):

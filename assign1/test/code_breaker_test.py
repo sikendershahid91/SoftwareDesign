@@ -17,7 +17,7 @@ class CodeBreakerTest(unittest.TestCase):
 
     def test_guess_less_than_5_selection(self):
         try:
-            self.codeBreaker.guess_colors(self.codeBreaker.selected_colors)
+            self.codeBreaker.guess_colors([Color.black]*4)
             raise RuntimeError("guess accepts less than 5 colors.")
         except ValueError:
             pass
