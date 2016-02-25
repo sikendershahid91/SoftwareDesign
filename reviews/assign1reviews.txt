@@ -1,3 +1,16 @@
+[Venkat 02/25/16 07:24 AM GMT]
+synopsis: good so far, move forward. 
+
+details:
+Status: We don't need this. Keep true or false for won or not.
+No need for continue state.
+
+Write tests to design color selection. The tests we'd need for this are:
+1. five colors were selected
+2. colors selected are from the pool of colors
+3. colors selected are in random, that is not the same each time they're selected.
+
+------------------------------------------------------------------------------
 [Venkat 02/23/16 06:27 AM GMT]
 synopsis: reduce a lot 
 
