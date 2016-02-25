@@ -1,4 +1,5 @@
 from enum import Enum
+import random
 
 
 class Color(Enum):
@@ -12,6 +13,10 @@ class Color(Enum):
     yellow = 7
     orange = 8
     purple = 9
+    raw_umber = 10
+    fuchsia = 11
+    cadet_blue = 12
+    copper = 13
 
 
 class Response(Enum):
@@ -20,22 +25,22 @@ class Response(Enum):
     MATCH_POSITION = 2
 
 
-class Status(Enum):
-    WIN = 0
-    LOSE = 1
-    CONTINUE = 2
-
-
 class CodeBreaker:
     def __init__(self):
         self.selected_colors = []
         self.number_of_guess_made = 0
-        self.game_status = Status.CONTINUE
+        self.game_won = False
+        self.color_pool = [Color.copper, Color.cadet_blue, Color.fuchsia, 
+        Color.red, Color.green, Color.blue, Color.pink, Color.yellow, 
+        Color.pink, Color.orange, Color.purple]
 
     def set_colors_selection(self, input_selection):
         if len(input_selection) != 5:
             raise (ValueError('Not exactly 5 colors.'))
         self.selected_colors = input_selection
+
+    def random_colors_selection(self):
+        self.selected_colors = random.sample(self.color_pool*5, 5)
 
     def guess_colors(self, input_guess):
         if len(input_guess) != 5:
@@ -59,8 +64,6 @@ class CodeBreaker:
 
         self.number_of_guess_made += 1
         if self.number_of_guess_made <= 20 and response == [Response.MATCH_POSITION]*5:
-            self.game_status = Status.WIN
-        elif self.number_of_guess_made >= 20:
-            self.game_status = Status.LOSE
+            self.game_won = True
 
         return response

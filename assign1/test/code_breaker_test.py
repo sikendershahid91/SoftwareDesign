@@ -1,5 +1,5 @@
 import unittest
-from src.code_breaker import CodeBreaker, Color, Response, Status
+from src.code_breaker import CodeBreaker, Color, Response
 
 
 class CodeBreakerTest(unittest.TestCase):
@@ -75,13 +75,40 @@ class CodeBreakerTest(unittest.TestCase):
         selection = [Color.pink, Color.red, Color.green, Color.blue, Color.orange]
         self.codeBreaker.number_of_guess_made = 20
         self.codeBreaker.guess_colors(selection)
-        self.assertEqual(Status.LOSE, self.codeBreaker.game_status)
+        self.assertEqual(False, self.codeBreaker.game_won)
 
     def test_guess_correctly_when_chances_remaining(self):
         selection = [Color.pink, Color.red, Color.green, Color.blue, Color.orange]
         self.codeBreaker.number_of_guess_made = 1
         self.codeBreaker.guess_colors(selection)
-        self.assertEqual(Status.WIN, self.codeBreaker.game_status)
+        self.assertEqual(True, self.codeBreaker.game_won)
 
+    def test_random_colors_selection_expect_5_colors(self):
+        self.codeBreaker.selected_colors = []
+        self.codeBreaker.random_colors_selection()
+        self.assertEqual(5, len(self.codeBreaker.selected_colors))
 
+    def test_random_selection_are_from_color_pool(self):
+        self.codeBreaker.random_colors_selection()
+        self.assertTrue(set(self.codeBreaker.selected_colors).issubset(
+            set(self.codeBreaker.color_pool)))
+
+    def test_random_selection_are_random(self):
+        truly_random = True
+        previous_results = {}
+        self.codeBreaker.random_colors_selection()
+        previous_results[tuple(self.codeBreaker.selected_colors)] = True
+        self.codeBreaker.random_colors_selection()
+        truly_random = truly_random & (tuple(self.codeBreaker.selected_colors) not in previous_results)
+        previous_results[tuple(self.codeBreaker.selected_colors)] = True
+        self.codeBreaker.random_colors_selection()
+        truly_random = truly_random & (tuple(self.codeBreaker.selected_colors) not in previous_results)
+        previous_results[tuple(self.codeBreaker.selected_colors)] = True
+        self.codeBreaker.random_colors_selection()
+        truly_random = truly_random & (tuple(self.codeBreaker.selected_colors) not in previous_results)
+        previous_results[tuple(self.codeBreaker.selected_colors)] = True
+        self.codeBreaker.random_colors_selection()
+        truly_random = truly_random & (tuple(self.codeBreaker.selected_colors) not in previous_results)
+        previous_results[tuple(self.codeBreaker.selected_colors)] = True
+        self.assertTrue(truly_random)
 
