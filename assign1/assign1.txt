@@ -22,8 +22,18 @@ beforehand?
 
 We did not expect to write that many tests for the code. We had planned a certain schedule. That schedule did not work out as planned. We should devote time better to tactical scheduling.
 
+Total [100]: 89
 
-Grading postponed: Waiting for response to 
-<https://groups.google.com/d/msg/uhcss16sd/tsa2ha909nY/uU9hAQ_UFQAJ>
-from shahid
+Message to both: Please consult with your pair to see how the pairing can be  improved. If it does not get better, consider changing the pairing.
 
+Program runs and able to play the game [20]: -7
+The GUI is not intuitive to use. Not sure what to click and how to proceed. Also, clicking on different buttons did not yield any useful result.
+
+All tests pass [20]:
+Code coverage [10]: -2
+Write minimum code when a test fails.
+
+Test quality [20]:
+Design and code quality [20]:
+Answer to questions [10]: -2
+Lacking discussion and details on learnings are rather light.
