@@ -3,20 +3,20 @@ import random
 
 
 class Color(Enum):
-    black = 0
-    white = 1
-    silver = 2
-    red = 3
-    green = 4
-    blue = 5
-    pink = 6
-    yellow = 7
-    orange = 8
-    purple = 9
-    raw_umber = 10
-    fuchsia = 11
-    cadet_blue = 12
-    copper = 13
+    black = '#000000'
+    white = '#FFFFFF'
+    silver = '#C9C0BB'
+    red = '#ED0A3F'
+    green = '#3AA655'
+    blue = '#4997D0'
+    pink = '#FFA6C9'
+    yellow = '#FBE870'
+    orange = '#FF8833'
+    purple = '#733380'
+    raw_umber = '#665233'
+    electric_lime = '#CCFF00'
+    cadet_blue = '#A9B2C3'
+    copper = '#DA8A67'
 
 
 class Response(Enum):
@@ -30,9 +30,9 @@ class CodeBreaker:
         self.selected_colors = []
         self.number_of_guess_made = 0
         self.game_won = False
-        self.color_pool = [Color.copper, Color.cadet_blue, Color.fuchsia, 
+        self.color_pool = [Color.copper, Color.cadet_blue, Color.electric_lime, 
         Color.red, Color.green, Color.blue, Color.pink, Color.yellow, 
-        Color.pink, Color.orange, Color.purple]
+        Color.orange, Color.purple]
 
     def set_colors_selection(self, input_selection):
         if len(input_selection) != 5:
