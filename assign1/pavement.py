@@ -6,10 +6,14 @@ import os
 import glob
 import shutil
 
+@task
+def run():
+    sh('python3 src/code_breaker_ui.py')
+    pass
 
 @task
 def test():
-    sh('nosetests test')
+    sh('nosetests --with-coverage test')
     pass
 
 
@@ -22,6 +26,6 @@ def clean():
 
 
 @task
-@needs(['clean', 'test'])
+@needs(['clean', 'test', 'run'])
 def default():
     pass
