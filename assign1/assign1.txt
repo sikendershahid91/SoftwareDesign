@@ -10,14 +10,15 @@ After completing the assignment (and only after) answer the following questions:
 
 1. What did you learn mainly in this assignment?
 
-YOUR ANSWER GOES HERE
+We learnt mainly to do TDD. Simplify your code, don't add unneccessary addition, and always use automatic test for your code.
 
 2. How is your current design different, if at all, from the strategic design created in hw2?
 
-YOUR ANSWER GOES HERE
+We created only a main class for the engine. And 2-3 smaller helper enum classes to communicate the game progress. ColorPool and ColorSelection classes we decided on did not end up in the code. Our GameUI is sketchy. It only contains one class that do both controller and model responsibilites.
 
 3. Were there any surprise or things you did not expect along the way? Any 
 particular problem faced, things you had to tackle that you did not expect 
 beforehand?
 
-YOUR ANSWER GOES HERE
+We did not expect to write that many tests for the code. We had planned a certain schedule. That schedule did not work out as planned. We should devote time better to tactical scheduling.
+
