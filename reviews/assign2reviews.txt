@@ -1,0 +1,8 @@
+[Venkat 02/28/16 09:20 AM GMT]
+synopsis: start with a valuable behavior. 
+
+details:
+
+Testing for getters and setters is a common testing anti-pattern. Instead of testing for get and set, start with an interesting and valuable behavior.
+
+------------------------------------------------------------------------------
