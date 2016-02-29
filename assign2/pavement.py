@@ -6,6 +6,7 @@ import os
 import glob
 import shutil
 
+
 @task
 def test():
     sh('nosetests test')

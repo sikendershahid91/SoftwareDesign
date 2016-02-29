@@ -1,5 +1,4 @@
 import unittest
-import unittest.mock
 from src.weather_report import WeatherReport
 
 
