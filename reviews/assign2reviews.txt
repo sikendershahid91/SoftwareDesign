@@ -1,3 +1,45 @@
+[Venkat 02/29/16 05:44 AM GMT]
+synopsis: build failed 
+
+details:
+---> pavement.default
+---> pavement.clean
+---> pavement.test
+nosetests test
+E
+======================================================================
+ERROR: Failure: ImportError (No module named 'requests')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/site-packages/nose/failure.py", line 39, in runTest
+    raise self.exc_val.with_traceback(self.tb)
+  File "/usr/local/lib/python3.4/site-packages/nose/loader.py", line 411, in loadTestsFromName
+    addr.filename, addr.module)
+  File "/usr/local/lib/python3.4/site-packages/nose/importer.py", line 47, in importFromPath
+    return self.importFromDir(dir_path, fqname)
+  File "/usr/local/lib/python3.4/site-packages/nose/importer.py", line 94, in importFromDir
+    mod = load_module(part_fqname, fh, filename, desc)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File ".../nguyen_shahid/assign2/test/zipcode_information_test.py", line 2, in <module>
+    from src.zipcode_information import ZipCodeInformation
+  File ".../nguyen_shahid/assign2/src/zipcode_information.py", line 1, in <module>
+    import requests
+ImportError: No module named 'requests'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+------------------------------------------------------------------------------
 [Venkat 02/28/16 09:20 AM GMT]
 synopsis: start with a valuable behavior. 
 
