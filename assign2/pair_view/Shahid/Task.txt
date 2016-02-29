@@ -1,1 +1,24 @@
 "Task"
+
+
+tests to be performed:
+- Canary test
+- Setup test
+
+- read in 5 digit zipcode
+- read in zipcode 6 digit throw exception
+- load in list of zipcode
+- read in zipcode 4 digit throw exception
+- read in zipcode starting with 0 throw exception
+    - there are zipCodes that start with 0
+- read in zipcode with alpha throw exception
+    - empty results
+    - status : zero results
+- create dummy class to throw the different exception methods
+- locate the maximum temperature value
+    - sort in descending order extract first value
+- locate the minimum temperature value
+    - sort in ascending order extract first value
+
+
+- read in a invalid zipcode that throws exception
