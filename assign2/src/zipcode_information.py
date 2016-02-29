@@ -1,4 +1,5 @@
-import requests
+import urllib.request as request
+import json
 
 
 class ZipCodeInformation:
@@ -15,16 +16,16 @@ class ZipCodeInformation:
             self.zipcode = ""
 
     def get_city(self):
-        response = requests.get(self.google_zipcode_api + self.zipcode)
-        data = response.json()
+        response = request.urlopen(self.google_zipcode_api + self.zipcode)
+        data = json.loads(response.read().decode())
         for item in data['results'][0]["address_components"]:
             if "locality" in item["types"]:
                 return item["long_name"]
         return
 
     def get_state(self):
-        response = requests.get(self.google_zipcode_api + self.zipcode)
-        data = response.json()
+        response = request.urlopen(self.google_zipcode_api + self.zipcode)
+        data = json.loads(response.read().decode())
         for item in data['results'][0]["address_components"]:
             if "administrative_area_level_1" in item["types"]:
                 return item["short_name"]
