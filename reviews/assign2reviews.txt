@@ -1,3 +1,24 @@
+[Venkat 03/01/16 06:49 AM GMT]
+synopsis: let's change direction and refocus. 
+
+details:
+test_read_zipcode_5_digit:
+Let's read into the design that this test is telling us about:
+
+self.weatherReport.add_zipcode(["12345"]) This is adding a zip to the report.
+That simply means we're adding a state to the object instead of asking it to do some real work. Let's avoid state as much as possible. It is easy to add state, hard to manage it later.
+
+Let's remove all the tests (all files) and start with the following tests:
+
+1. call a function with a list of 3 zip codes. In the test, mock out a service that, given a zip code, returns city and state. Now, for the code being tested, ensure it gives proper city and state for the 3 given zip codes.
+
+2. call a function with only one zip code. Steps much like above.
+
+3. call a function with empty list of zip code. Steps much like above except for needing the mock.
+
+This will get us to focus on the main behavior of our code and help us define the interfaces we need for the dependencies.
+
+------------------------------------------------------------------------------
 [Venkat 02/29/16 05:44 AM GMT]
 synopsis: build failed 
 
