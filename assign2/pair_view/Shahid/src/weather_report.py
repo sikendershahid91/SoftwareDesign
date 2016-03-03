@@ -24,3 +24,7 @@ class WeatherReport:
     def read_list(self):
         pass
 
+    def set_zipcode(self, zipcode, zipcode_data):
+        self.zipcode_dictionary[zipcode] = zipcode_data
+        pass
+

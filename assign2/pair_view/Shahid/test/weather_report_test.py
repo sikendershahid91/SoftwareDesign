@@ -14,7 +14,6 @@ class WeatherReportTest(unittest.TestCase):
         self.weatherReport.read_list = MagicMock(name='read_list')
         self.zipcodeInformation = ZipcodeInformation()
         self.zipcodeInformation.get_zipcode_location = MagicMock(name='get_zipcode_location')
-        self.zipcodeInformation.get_zipcode_location.return_value = {'city': 'changed_city', 'state': 'changed_state'}
 
     def test_dictionary_set_up_when_read_zipcode_with_exception_if_invalid_zipcode_type(self):
         self.assertRaises(ValueError, self.weatherReport.add_zipcode, ["123456"])
@@ -26,16 +25,23 @@ class WeatherReportTest(unittest.TestCase):
     def test_read_zipcode_return_correct_data_and_format(self):
         zipcode_list = self.weatherReport.read_list.return_value = ["77498"]
         self.weatherReport.add_zipcode(zipcode_list)
-        zipcode_data = self.zipcodeInformation.get_zipcode_location
-        with _patch_dict(self.weatherReport.zipcode_dictionary["77498"], zipcode_data):
-            assert self.weatherReport.zipcode_dictionary["77498"] == zipcode_data
-            print(self.weatherReport.zipcode_dictionary)
+        zipcode_data = self.zipcodeInformation.get_zipcode_location.return_value = {'city': 'Sugar Land', 'state': 'TX'}
+        self.weatherReport.zipcode_dictionary['77498'] = zipcode_data
+        self.assertEqual({'city': 'Sugar Land', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77498'])
 
     def test_read_3_zipcode_return_correct_data_and_format_(self):
         zipcode_list = self.weatherReport.read_list.return_value = ["77498", "77074", "77450"]
         self.weatherReport.add_zipcode(zipcode_list)
-        print(zipcode_list)
-        pass
+        _77498_data = self.zipcodeInformation.get_zipcode_location.return_value = {'city': 'Sugar Land', 'state': 'TX'}
+        _77074_data = self.zipcodeInformation.get_zipcode_location.return_value = {'city': 'Houston', 'state': 'TX'}
+        _77450_data = self.zipcodeInformation.get_zipcode_location.return_value = {'city': 'Katy', 'state': 'TX'}
+        self.weatherReport.set_zipcode('77498', _77498_data)
+        self.weatherReport.set_zipcode('77074', _77074_data)
+        self.weatherReport.set_zipcode('77450', _77450_data)
+        self.assertEqual({'city': 'Sugar Land', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77498'])
+        self.assertEqual({'city': 'Houston', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77074'])
+        self.assertEqual({'city': 'Katy', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77450'])
+
 
         # def test_read_empty_list_return_empty_dictionary(self):
         #     zipcode_list = self.weatherReport.read_list.return_value = [" "]
