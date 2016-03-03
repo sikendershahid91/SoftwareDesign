@@ -1,7 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from unittest.mock import patch
-from unittest.mock import _patch_dict
+# from unittest.mock import patch
 from src.weather_report import WeatherReport, ZipcodeInformation
 
 
@@ -42,8 +41,7 @@ class WeatherReportTest(unittest.TestCase):
         self.assertEqual({'city': 'Houston', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77074'])
         self.assertEqual({'city': 'Katy', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77450'])
 
-
-        # def test_read_empty_list_return_empty_dictionary(self):
-        #     zipcode_list = self.weatherReport.read_list.return_value = [" "]
-        #     self.weatherReport.add_zipcode(zipcode_list)
-        #     pass
+    def test_read_empty_list_return_empty_dictionary(self):
+        zipcode_list = self.weatherReport.read_list.return_value = [" "]
+        self.weatherReport.add_zipcode(zipcode_list)
+        self.assertEqual({}, self.weatherReport.zipcode_dictionary)

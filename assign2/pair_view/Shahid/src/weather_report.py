@@ -15,6 +15,8 @@ class WeatherReport:
 
     def add_zipcode(self, read_zipcode):
         for zipcode in read_zipcode:
+            if zipcode == " ":
+                continue
             if len(zipcode) != 5 or not(zipcode.isdigit()):
                 raise ValueError("Invalid Zipcode Error: Invalid number of digits")
             else:
@@ -25,6 +27,6 @@ class WeatherReport:
         pass
 
     def set_zipcode(self, zipcode, zipcode_data):
-        self.zipcode_dictionary[zipcode] = zipcode_data
-        pass
+        if zipcode != " ":
+            self.zipcode_dictionary[zipcode] = zipcode_data
 
