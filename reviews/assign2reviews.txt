@@ -1,3 +1,36 @@
+[Venkat 03/03/16 18:08 PM GMT]
+synopsis: remove duplicated files, rework some things in the tests.
+
+details:
+Please don't leave commented out stuff in code or test.
+
+WeatherReportTest:
+Good tests.
+
+ZipcodeInformation: Remove
+ZipCodeInformation: Remove (found another file with this also)
+
+ZipCodeInformationTest: Remove
+
+ZipcodeInformation: Remove this (a third file with this stuff).
+
+Just keep one of this (with only abstract method) in a separate file.
+No implementation for this should be there at this time.
+
+I am getting confused, I am seeing multiple files with the same class names.
+Each class should appears in exactly one file, not in multiple files.
+WeatherReportTest is found in more than one file.
+
+I see what's going on. Get rid of pair_view. It should not be here.
+Create whatever you like within your repository, but keep in assign2 only things that I should review and are part of "releasable" code for the assignment.
+
+After fixing these, think of more tests for getting cities and states. What if the service (simulated by mock) were to fail. What if the zip code is reported by the service (simulated by mock of course) as invalid.
+
+After that move on to working with the weather data.
+
+Make sure you do not have any code what so every to deal with the real service, for cities data or for weather data, at this time. We do not want to see any real dependency being used right now.
+
+------------------------------------------------------------------------------
 [Venkat 03/01/16 06:49 AM GMT]
 synopsis: let's change direction and refocus. 
 
