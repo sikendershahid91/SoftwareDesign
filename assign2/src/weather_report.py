@@ -1,13 +1,3 @@
-import abc
-
-
-class ZipcodeInformation:
-    __metaclass__ = abc.ABCMeta
-
-    @abc.abstractmethod
-    def get_zipcode_location(self, zipcode):
-        raise NotImplemented
-
 
 class WeatherReport:
     def __init__(self):

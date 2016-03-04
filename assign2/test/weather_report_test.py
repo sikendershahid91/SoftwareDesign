@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, Mock
-from src.weather_report import WeatherReport, ZipcodeInformation
+from src.weather_report import WeatherReport
 
 
 class WeatherReportTest(unittest.TestCase):
@@ -10,9 +10,9 @@ class WeatherReportTest(unittest.TestCase):
     def setUp(self):
         self.weatherReport = WeatherReport()
 
-    # def test_read_zipcode_5_digit(self):
-    #     self.weatherReport.add_zipcode(["12345"])
-    #     self.assertEqual(['12345'], self.weatherReport.zipcode_list)
+    def test_read_zipcode_5_digit(self):
+        self.weatherReport.add_zipcode(["12345"])
+        self.assertEqual(['12345'], self.weatherReport.zipcode_list)
 
     @patch.object(ZipcodeInformation, 'get_zipcode_location')
     def test_read_one_zipcode_location_when_service_working(
