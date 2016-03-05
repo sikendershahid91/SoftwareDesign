@@ -1,16 +1,3 @@
-import abc
-
-
-class ZipcodeServiceInterface:
-    __metaclass__ = abc.ABCMeta
-
-    @abc.abstractmethod
-    def get_zipcode_location(self, zipcode):
-        raise NotImplemented
-
-    @abc.abstractmethod
-    def get_zipcode_weather(self, zipcode):
-        raise NotImplemented
 
 
 class WeatherReport:
@@ -21,8 +8,7 @@ class WeatherReport:
     def read_zipcodes(self, read_zipcode):
         for zipcode in read_zipcode:
             if len(zipcode) != 5 or not(zipcode.isdigit()):
-                raise ValueError(
-                    "Invalid Zipcode Error: Invalid number of digits")
+                raise ValueError('Error: Invalid Zipcode')
             else:
                 self.set_zipcode_location(zipcode)
                 self.set_zipcode_weather(zipcode)
