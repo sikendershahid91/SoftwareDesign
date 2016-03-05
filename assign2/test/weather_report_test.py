@@ -11,7 +11,7 @@ class WeatherReportTest(unittest.TestCase):
     def setUp(self):
         self.weatherReport = WeatherReport()
 
-    def test_read_zipcode_5_digit(self):
+    def test_read_zipcode_5_digit(self): #Venkat: Remove, not the SRP of code being tested
         self.assertRaises(ValueError, self.weatherReport.read_zipcodes, ["123A45"])
 
     @patch.object(ZipcodeServiceInterface, 'get_zipcode_location')

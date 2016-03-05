@@ -1,7 +1,7 @@
 import abc
 
 
-class ZipcodeServiceInterface:
+class ZipcodeServiceInterface: #Venkat: Too much here. In reality we don't need this at all. Python is quite dynamic, it does not need defining interfaces or abstract classes. We can remove this.
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
