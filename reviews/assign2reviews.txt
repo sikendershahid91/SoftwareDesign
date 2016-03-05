@@ -1,3 +1,14 @@
+[Venkat 03/05/16 15:32 PM MST]
+synopsis: in the right direction. Fix and move forward. 
+
+details:
+Include coverage report (see pavement.py in assign1 or ask for help if you don't know how to include the coverage report).
+
+If service reports that a zip code is invalid then capture that detail in the list so that information can be used later on.
+
+After fixing these, move on to collect data about temperature and weather conditions. Again, keep the dependency on the real service away, continue to use mocks.
+
+------------------------------------------------------------------------------
 [Venkat 03/03/16 18:08 PM GMT]
 synopsis: remove duplicated files, rework some things in the tests.
 
