@@ -1,7 +1,21 @@
+import abc
+
+
+class ZipcodeServiceInterface:
+    __metaclass__ = abc.ABCMeta
+
+    @abc.abstractmethod
+    def get_zipcode_location(self, zipcode):
+        raise NotImplemented
+
+    @abc.abstractmethod
+    def get_zipcode_weather(self, zipcode):
+        raise NotImplemented
+
 
 class WeatherReport:
     def __init__(self):
-        self.location_service = None
+        self.zipcode_service = None
         self.zipcode_location_dictionary = {}
 
     def read_zipcodes(self, read_zipcode):
@@ -10,10 +24,15 @@ class WeatherReport:
                 raise ValueError(
                     "Invalid Zipcode Error: Invalid number of digits")
             else:
-                self.zipcode_location_dictionary[zipcode] = (
-                    self.location_service.get_zipcode_location(zipcode))
+                self.set_zipcode_location(zipcode)
+                self.set_zipcode_weather(zipcode)
         return self.zipcode_location_dictionary
 
     def set_location_service(self, service):
-        self.location_service = service
+        self.zipcode_service = service
 
+    def set_zipcode_location(self, zipcode):
+        self.zipcode_location_dictionary[zipcode] = (self.zipcode_service.get_zipcode_location(zipcode))
+
+    def set_zipcode_weather(self, zipcode):
+        self.zipcode_location_dictionary[zipcode] = (self.zipcode_service.get_zipcode_weather(zipcode))
