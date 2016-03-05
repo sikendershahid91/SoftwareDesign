@@ -39,7 +39,7 @@ class WeatherReportTest(unittest.TestCase):
         self.weatherReport.set_zipcode('77450', _77450_data)
         self.assertEqual({'city': 'Sugar Land', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77498'])
         self.assertEqual({'city': 'Houston', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77074'])
-        self.assertEqual({'city': 'Katy', 'state': 'TX'}, self.weatherReport.zipcode_dictionary['77450'])
+        self.assertEqual({'city': 'Katy', 'statgie': 'TX'}, self.weatherReport.zipcode_dictionary['77450'])
 
     def test_read_empty_list_return_empty_dictionary(self):
         zipcode_list = self.weatherReport.read_list.return_value = [" "]

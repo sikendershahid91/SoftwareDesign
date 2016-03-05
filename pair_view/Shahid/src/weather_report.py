@@ -79,4 +79,3 @@ class WeatherReport:
         #                     self.zipcode_service.get_zipcode_location(zipcode))
         #                 self.zipcode_dictionary[zipcode] = (
         #                     self.zipcode_service.get_zipcode_weather(zipcode))
-
