@@ -9,7 +9,7 @@ import shutil
 
 @task
 def test():
-    sh('nosetests test')
+    sh('nosetests --with-coverage test')
     pass
 
 
