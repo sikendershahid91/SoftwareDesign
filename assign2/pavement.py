@@ -9,7 +9,7 @@ import shutil
 
 @task
 def test():
-    sh('nosetests --with-coverage test')
+    sh('nosetests --with-coverage --cover-html test')
     pass
 
 
@@ -18,6 +18,7 @@ def clean():
     for pycfile in glob.glob("*/*/*.pyc"): os.remove(pycfile)
     for pycache in glob.glob("*/__pycache__"): os.removedirs(pycache)
     for pycache in glob.glob("./__pycache__"): shutil.rmtree(pycache)
+    for cover in glob.glob("./cover"): shutil.rmtree(cover)
     pass
 
 
