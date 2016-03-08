@@ -1,3 +1,15 @@
+[Venkat 03/08/16 05:06 AM MST]
+synopsis: nice progress 
+
+details:
+Take a look at and remove any line of code not covered by tests.
+http://agile.cs.uh.edu:8082/job/sd_16_nguyen_shahid/ws/assign2/cover/index.html
+
+nice progress.
+
+Write tests for getting the warmest cities. Then tests for getting the coldest cities.
+
+------------------------------------------------------------------------------
 [Venkat 03/05/16 15:32 PM MST]
 synopsis: in the right direction. Fix and move forward. 
 
