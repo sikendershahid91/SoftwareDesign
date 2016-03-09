@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 class WeatherService:
     def __init__(self):
-        self.weather_gov_url = (
+        self._weather_gov_url = (
             'http://graphical.weather.gov/xml/sample_products/browser_interface'
             '/ndfdBrowserClientByDay.php?'
             'format=24+hourly&numDays=1&zipCodeList=')
@@ -11,8 +11,8 @@ class WeatherService:
     def get_zipcode_weather(self, zipcode):
         if len(zipcode) != 5 or not(zipcode.isdigit()):
             return 'INVALID'
-            
-        response = requests.get(self.weather_gov_url + zipcode)
+
+        response = requests.get(self._weather_gov_url + zipcode)
         if response.status_code != 200:
             return 'ERROR'
 
