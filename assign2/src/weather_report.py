@@ -13,6 +13,11 @@ class WeatherReport:
             lambda x: (x, self.weather_service.get_zipcode_weather(x)),
             zipcodes))
 
+    def get_coldest_city(self, zipcodes):
+        return min(
+            self.get_weather_data(zipcodes).items(),
+            key = lambda x: int(x[1][0])) [0]
+
     def set_location_service(self, service):
         self.location_service = service
 

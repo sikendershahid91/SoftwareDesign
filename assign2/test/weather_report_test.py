@@ -80,4 +80,17 @@ class WeatherReportTest(unittest.TestCase):
         self.assertEqual({}, 
             self.weatherReport.get_weather_data(zipcode_list_to_read))
 
+    @patch.object(WeatherService, 'get_zipcode_weather')
+    def test_coldest_zipcode_weather_from_3_cities(
+            self, mock_weather):
+        zipcode_list_to_read = ['77004', '90210', '10001']
+        mock_weather.get_zipcode_weather.side_effect = [
+            ('20', '25', 'sunny'),
+            ('45', '70', 'mostly cloudy'),
+            ('65', '44', 'rainy day')]
+        self.weatherReport.set_weather_service(mock_weather)
+        self.assertEqual(
+            '77004',
+            self.weatherReport.get_coldest_city(zipcode_list_to_read))
+
 
