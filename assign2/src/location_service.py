@@ -11,7 +11,6 @@ class LocationService:
             return 'INVALID'
         response = requests.get(self._google_api_url + zipcode)
         if response.status_code != 200:
-            print(response.status_code)
             return 'ERROR'
         json_data = response.json()
         address_components = json_data['results'][0]['address_components']
