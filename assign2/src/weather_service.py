@@ -11,6 +11,7 @@ class WeatherService:
     def get_zipcode_weather(self, zipcode):
         if len(zipcode) != 5 or not(zipcode.isdigit()):
             return 'INVALID'
+            
         response = requests.get(self.weather_gov_url + zipcode)
         if response.status_code != 200:
             return 'ERROR'
