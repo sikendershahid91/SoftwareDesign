@@ -13,6 +13,7 @@ class WeatherService:
             return 'INVALID'
 
         response = requests.get(self._weather_gov_url + zipcode)
+        
         if response.status_code != 200:
             return 'ERROR'
 
