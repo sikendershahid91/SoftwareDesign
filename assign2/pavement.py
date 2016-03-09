@@ -9,7 +9,7 @@ import shutil
 
 @task
 def test():
-    sh('nosetests --with-coverage --cover-html test')
+    sh('nosetests --with-coverage --cover-erase --cover-package=src --cover-html test')
     pass
 
 
