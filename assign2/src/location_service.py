@@ -11,15 +11,15 @@ class LocationService:
             return 'INVALID'
         response = requests.get(self._google_api_url + zipcode)
         if response.status_code != 200:
+            print(response.status_code)
             return 'ERROR'
         json_data = response.json()
         address_components = json_data['results'][0]['address_components']
-        city = filter(
-            (lambda x: value['short_name'] if (
-                'locality' in value['types'])),
-            list(enumerate(address_components)))
-        # state = filter(
-        #     lambda key, value: value['short_name'] if 'administrative_area_level_1' in value['types'],
-        #     enumerate(address_components))
+        for key, value in enumerate(address_components):
+            if 'locality' in value['types']:
+                city = value['short_name']
+            if 'administrative_area_level_1' in value['types']:
+                state = value['short_name']
+
         state = 'TX'
         return (city, state)

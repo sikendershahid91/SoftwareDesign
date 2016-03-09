@@ -6,15 +6,7 @@ class LocationServiceTest(unittest.TestCase):
 
     def setUp(self):
         self.locationService = LocationService()
-
-    # @patch.object(LocationService, 'get_zipcode_location')
-    # def test_read_one_zipcode_location_when_service_working(
-    #         self, mock_location):
-    #     zipcode_list_to_read = ['77004']
-    #     mock_location.get_zipcode_location.return_value = ('Houston', 'TX')
-    #     self.weatherReport.set_location_service(mock_location)
-    #     self.assertEqual({'77004': ('Houston', 'TX')}, 
-    #         self.weatherReport.get_cities_and_state(zipcode_list_to_read))
+        
 
     def test_get_invalid_from_service_for_wrong_zipcode_digit(self):
         self.assertEqual('INVALID', 
@@ -26,16 +18,14 @@ class LocationServiceTest(unittest.TestCase):
 
     @patch('src.location_service.requests.get')
     def test_not_succesful_http_connection_output(self, mock_get):
-        mock_response = Mock()
-        mock_response.status_code = 404
-        mock_get.response = mock_response
+        mock_response = Mock(status_code = 404)
+        mock_get.return_value = mock_response
         self.assertEqual('ERROR', 
             self.locationService.get_zipcode_location('77004'))
 
     @patch('src.location_service.requests.get')
     def test_get_correct_location_from_successful_json_data(self, mock_get):
-        mock_response = Mock()
-        mock_response.status_code = 200
+        mock_response = Mock(status_code = 200)
         mock_response.json.return_value = (
             {
                 "results" : [
@@ -54,7 +44,7 @@ class LocationServiceTest(unittest.TestCase):
                 ],
                 "status" : "OK",
             })
-        mock_get.response = mock_response
+        mock_get.return_value = mock_response
         self.assertEqual(('Houston', 'TX'), 
             self.locationService.get_zipcode_location('77004'))
 
