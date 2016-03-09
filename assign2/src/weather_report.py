@@ -18,6 +18,11 @@ class WeatherReport:
             self.get_weather_data(zipcodes).items(),
             key = lambda x: int(x[1][0])) [0]
 
+    def get_hottest_city(self, zipcodes):
+        return max(
+            self.get_weather_data(zipcodes).items(),
+            key = lambda x: int(x[1][1])) [0]
+
     def set_location_service(self, service):
         self.location_service = service
 
