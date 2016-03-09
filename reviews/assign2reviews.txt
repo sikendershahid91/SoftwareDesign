@@ -1,3 +1,14 @@
+[Venkat 03/09/16 06:28 AM MST]
+synopsis: very nice 
+
+details:
+Please remove my review notes in code from the previous reviews before asking for a review.
+
+WeatherServiceTest: Truly liking what I'm seeing in this test class.
+
+Move on to create a driver program that reads a file of zip codes and prints to the console the results. No need for tests for this driver program or reading the file, but keep the code modular and cohesive.
+
+------------------------------------------------------------------------------
 [Venkat 03/08/16 05:06 AM MST]
 synopsis: nice progress 
 
