@@ -1,3 +1,12 @@
+[Venkat 03/10/16 07:49 AM MST]
+synopsis: unable to run the main from build file 
+
+details:
+Please change the build file, assign1/pavement.py for how we ran the ui there.
+
+Good progress.
+
+------------------------------------------------------------------------------
 [Venkat 03/09/16 06:28 AM MST]
 synopsis: very nice 
 

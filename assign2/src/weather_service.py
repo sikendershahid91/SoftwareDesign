@@ -1,7 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
 
-
 class WeatherService:
     def __init__(self):
         self._weather_gov_url = (

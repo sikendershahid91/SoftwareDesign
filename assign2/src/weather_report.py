@@ -21,7 +21,7 @@ class WeatherReport:
                              self._location_service.get_zipcode_location(zipcode) +
                              self._weather_service.get_zipcode_weather(zipcode)), zipcode_list))
 
-    def get_coldest_city(self, zipcode_list):
+    def get_coldest_city(self, zipcode_list): #Venkat: Is this zip code list or weather data list?
         return min(self.get_weather_data(zipcode_list).items(), key=lambda weather_data: int(weather_data[1][0]))[0]
 
     def get_hottest_city(self, zipcode_list):
