@@ -100,7 +100,26 @@ class WeatherReportTest(unittest.TestCase):
             ('45', '70', 'mostly cloudy'),
             ('65', '44', 'rainy day')]
         self.weatherReport.set_weather_service(mock_weather)
-        print(self.weatherReport.get_hottest_city(zipcode_list_to_read))
-        # self.assertEqual(
-        #     '90210',
-        #     self.weatherReport.get_hottest_city(zipcode_list_to_read))
+        self.assertEqual(
+            '90210',
+            self.weatherReport.get_hottest_city(zipcode_list_to_read))
+
+    @patch.object(WeatherService, 'get_zipcode_weather')
+    @patch.object(LocationService, 'get_zipcode_location')
+    def test_data_return_format(self, mock_weather, mock_location):
+        zipcode_list_to_read = ['77004', '90210', '10001']
+        mock_weather.get_zipcode_weather.side_effect = [
+            ('20', '25', 'sunny'),
+            ('45', '70', 'mostly cloudy'),
+            ('65', '44', 'rainy day')]
+        mock_location.get_zipcode_location.side_effect = [
+            ('Houston', 'TX'),
+            ("Beverly Hills", 'CA'),
+            ('New York', 'NY')]
+        self.weatherReport.set_location_service(mock_location)
+        self.weatherReport.set_weather_service(mock_weather)
+        self.assertEqual(
+            {'77004': ('Houston', 'TX', '20', '25', 'sunny'),
+             '90210': ('Beverly Hills', 'CA', '45', '70', 'mostly cloudy'),
+             '10001': ('New York', 'NY', '65', '44', 'rainy day')},
+            self.weatherReport.get_all_data(zipcode_list_to_read))
