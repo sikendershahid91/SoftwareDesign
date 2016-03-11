@@ -9,7 +9,7 @@ import shutil
 
 @task
 def run():
-    sh('python3.5 src/main_weather_report.py')
+    sh('python3 src/main_weather_report.py')
     pass
 
 @task
