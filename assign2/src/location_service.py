@@ -20,7 +20,7 @@ class LocationService:
         
         for component in address_components:
             if 'locality' in component['types']:
-                city = component['short_name']
+                city = component['long_name']
             if 'administrative_area_level_1' in component['types']:
                 state = component['short_name']
 

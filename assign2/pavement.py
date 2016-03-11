@@ -6,9 +6,10 @@ import os
 import glob
 import shutil
 
+
 @task
 def run():
-    sh('python3 src/main_weather_report.py')
+    sh('python3.5 src/main_weather_report.py')
     pass
 
 @task
@@ -29,4 +30,4 @@ def clean():
 @task
 @needs(['clean', 'test', 'run'])
 def default():
-    pass
+	pass

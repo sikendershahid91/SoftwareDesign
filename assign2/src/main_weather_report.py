@@ -4,13 +4,25 @@ from location_service import LocationService
 import sys
 
 
-def print_weather_data_to_console(zipcode, location_data, weather_data):
+def print_zipcode_and_city_state(zipcode, location_data, end = '\n'):
     city, state = location_data
-    min_temperature, max_temperature, condition = weather_data
+    print("{:<20}{:<10}{:<10}".format(city, state, zipcode), end = end)
 
-    print(("{:s}\t{:s}\t{:s}\t{:s}\t{:s}\t{:s}"
-        .format(city, state, zipcode, min_temperature, max_temperature, condition)
-        .expandtabs(10)))
+
+def print_weather_data(weather_data):
+    min_temperature, max_temperature, condition = weather_data
+    print(("{:<10}{:<10}{:s}"
+        .format(min_temperature, max_temperature, condition)))
+
+
+def print_zipcode_data_to_console(zipcode, location_data, weather_data):
+    print_zipcode_and_city_state(zipcode, location_data, end = '')
+    print_weather_data(weather_data)
+
+
+def sorted_zipcode_by_city(zipcode_list, location_dictionary):
+    zipcode_list.sort(key = lambda zipcode: location_dictionary[zipcode][0])
+    return zipcode_list
 
 
 def main():
@@ -26,23 +38,23 @@ def main():
     weather_dictionary = weather_report.get_weather_data(zipcode_list)
 
     print("Weather data:")
-    print("City\tState\tZipcode\tMin\tMax\tCondition".expandtabs(10))
+    print("City\t\tState\tZipcode\tMin\tMax\tCondition".expandtabs(10))
+
+    zipcode_list = sorted_zipcode_by_city(zipcode_list, location_dictionary)
 
     for zipcode in zipcode_list:
-        print_weather_data_to_console(
+        print_zipcode_data_to_console(
             zipcode,
             location_dictionary[zipcode],
             weather_dictionary[zipcode])
 
     print("\nHottest city:")
     zipcode = weather_report.get_hottest_zipcode(weather_dictionary)
-    city, state = location_dictionary[zipcode]
-    print("{:s}\t{:s}\t{:s}".format(city, state, zipcode).expandtabs(10))
+    print_zipcode_and_city_state(zipcode, location_dictionary[zipcode])
 
     print("\nColdest city:")
     zipcode = weather_report.get_coldest_zipcode(weather_dictionary)
-    city, state = location_dictionary[zipcode]
-    print("{:s}\t{:s}\t{:s}".format(city, state, zipcode).expandtabs(10))
+    print_zipcode_and_city_state(zipcode, location_dictionary[zipcode])
 
 
 if __name__ == '__main__':
