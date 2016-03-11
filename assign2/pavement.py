@@ -27,6 +27,6 @@ def clean():
 
 
 @task
-@needs(['clean', 'test'])
+@needs(['clean', 'test', 'run'])
 def default():
     pass
