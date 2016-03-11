@@ -1,6 +1,7 @@
 from weather_report import WeatherReport
 from weather_service import WeatherService
 from location_service import LocationService
+import sys
 
 
 def print_weather_data_to_console(zipcode, location_data, weather_data):
@@ -18,7 +19,7 @@ def main():
     weather_report.set_location_service( LocationService() )
     weather_report.set_weather_service( WeatherService() )
 
-    with open('zipcode_list.txt', 'r') as file:
+    with open(sys.path[0] + '/zipcode_list.txt', 'r') as file:
         zipcode_list = file.read().splitlines()
 
     location_dictionary = weather_report.get_cities_and_state(zipcode_list)
