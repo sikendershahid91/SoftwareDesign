@@ -9,7 +9,10 @@ import shutil
 
 @task
 def run():
-    sh('python3 src/main_weather_report.py')
+    if os.name == 'nt':
+        sh('py -3 src/main_weather_report.py')
+    else:
+        sh('python3 src/main_weather_report.py')
     pass
 
 @task
