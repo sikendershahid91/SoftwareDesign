@@ -34,3 +34,5 @@ http://maps.googleapis.com/maps/api/geocode/json?address=ZIPCODE
 
 To get the forecast, give a zip code:
 http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?zipCodeList=ZIPCODE&format=24+hourly&numDays=1
+
+Grading postponed. Waiting for response to <https://groups.google.com/d/msg/uhcss16sd/EdmkTdFlFrk/tHQNbipiGgAJ> from shahid
