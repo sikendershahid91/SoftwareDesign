@@ -35,4 +35,12 @@ http://maps.googleapis.com/maps/api/geocode/json?address=ZIPCODE
 To get the forecast, give a zip code:
 http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?zipCodeList=ZIPCODE&format=24+hourly&numDays=1
 
-Grading postponed. Waiting for response to <https://groups.google.com/d/msg/uhcss16sd/EdmkTdFlFrk/tHQNbipiGgAJ> from shahid
+Total [100]: 95
+
+Program works [20]:
+Gracefully handles invalid zipcode/network failure [5]: -5
+All tests pass [20]:
+Test quality [20]:
+Test coverage [10]:
+Design quality [10]:
+Code quality [10]:
