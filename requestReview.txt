@@ -1,3 +1,6 @@
 You may request for reviews as many times as you like. A review will be provided within 24 hours of your request. Any review requests made within 48 hours before the deadline may not receive any reviews.
 
-The review for assign2 is now closed. It was a pleasure seeing teams work hard and make progress.
+An automated script scans this file, Venkat does not view this file - don't put any notes for him here.
+
+Ready for review? Remove no from the next line and check this file in.
+no
