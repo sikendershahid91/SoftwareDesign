@@ -1,3 +1,11 @@
+[Venkat 03/23/16 21:27 PM PDT]
+synopsis: let's refactor 
+
+details:
+fibonacci_iterative:
+Let's refactor to functional style. How about using reduce?
+
+------------------------------------------------------------------------------
 [Venkat 03/22/16 23:56 PM PDT]
 synopsis: Check CI build
 
