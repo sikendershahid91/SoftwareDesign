@@ -1,3 +1,17 @@
+[Venkat 03/26/16 04:17 AM PDT]
+synopsis: refactor and move forward 
+
+details:
+fibonacci_iterative:
+fibo_nums to previous
+iteration to index
+
+fibo_nums[1] to previous[1]
+fibo_nums[0] + fibo_nums[1] to sum(previous)
+
+Then move on to the recursive solution. After writing the code, think through to see if any design principles are being violated.
+
+------------------------------------------------------------------------------
 [Venkat 03/25/16 20:43 PM PDT]
 synopsis: wow, where did all this code come from. Take small steps.
 
