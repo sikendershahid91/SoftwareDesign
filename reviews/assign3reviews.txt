@@ -1,3 +1,11 @@
+[Venkat 03/25/16 20:43 PM PDT]
+synopsis: wow, where did all this code come from. Take small steps.
+
+details:                                        
+Delete everything other than iterative solution. Don't rush. Take small steps.
+We have not completed the iterative solution yet, why do we want to rush and dump so much code?
+
+------------------------------------------------------------------------------
 [Venkat 03/23/16 21:27 PM PDT]
 synopsis: let's refactor 
 
