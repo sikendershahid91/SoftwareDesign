@@ -6,7 +6,7 @@ def fibonacci_iterative(number):
 
     return reduce(
         lambda previous, index: [previous[1], sum(previous)],
-        range(number), [1, 1]) [0]
+        range(number + 1), [1, 0]) [1]
 
 #Venkat: should the above really be the following:
 #        lambda previous, index: [previous[1], sum(previous)],
