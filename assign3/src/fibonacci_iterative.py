@@ -5,5 +5,5 @@ def fibonacci_iterative(number):
         raise ValueError("Negative number!")
 
     return reduce(
-        lambda fibo_nums, iteration: [fibo_nums[1], fibo_nums[0] + fibo_nums[1]],
+        lambda previous, index: [previous[1], sum(previous)],
         range(number), [1, 1]) [0]
