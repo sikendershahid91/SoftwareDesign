@@ -1,3 +1,17 @@
+[Venkat 03/27/16 08:03 AM MDT]
+synopsis: let's keep it DRY 
+
+details:
+fibonacci_iterative_test:
+FibonacciTest change to FibonacciIterativeTest.
+
+fibonacci_recursive_test:
+FibonacciTest change to FibonacciRecursiveTest.
+
+Now,
+FibonacciIterativeTest and FibonacciRecursiveTest do exactly the same thing but on two different functions. That's violating DRY. Let's remove the duplication without violating SRP. That is, each test class should focus only on one function, but without duplicating the tests.
+
+------------------------------------------------------------------------------
 [Venkat 03/26/16 04:17 AM PDT]
 synopsis: refactor and move forward 
 

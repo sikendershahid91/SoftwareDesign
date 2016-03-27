@@ -4,3 +4,4 @@ def fibonacci_recursive(number):
 
     return 1 if number < 2 else (
     	fibonacci_recursive(number - 1) + fibonacci_recursive(number - 2))
+#Venkat: We can remove the extra () in the else part
