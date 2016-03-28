@@ -1,3 +1,13 @@
+[Venkat 03/28/16 04:39 AM MDT]
+synopsis: let's move forward 
+
+details:
+class fibonacciTest(object):
+Can we change this to class fibonacciTest:
+                      
+Move forward to the memoized-recursive solution. After writing revisit to ensure no principles are being violated.
+
+------------------------------------------------------------------------------
 [Venkat 03/27/16 08:03 AM MDT]
 synopsis: let's keep it DRY 
 
