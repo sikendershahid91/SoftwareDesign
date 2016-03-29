@@ -1,3 +1,14 @@
+[Venkat 03/29/16 06:08 AM MDT]
+synopsis: let's keep it DRY 
+
+details:
+fibonacci_memoized:
+This code is performing +. But that has already been done using sum in the recursive solution.
+Instead of duplicating that solution here, let's reuse the recursive solution in the implementation of the memoized solution.
+
+After doing that, write a performance test that shows that the memoized solution is faster than the recursive solution by at least 10 times.
+
+------------------------------------------------------------------------------
 [Venkat 03/28/16 04:39 AM MDT]
 synopsis: let's move forward 
 
