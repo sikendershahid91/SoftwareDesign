@@ -6,4 +6,4 @@ def fibonacci_iterative(number):
 
     return reduce(
         lambda previous, index: [previous[1], sum(previous)],
-          range(number + 1), [1, 0]) [1] #Venkat: added indentation to show this is part of the expression from the previous line
+        range(number + 1), [1, 0]) [1]
