@@ -6,12 +6,12 @@ from timeit import timeit
 
 class FibonacciPerformanceTest(unittest.TestCase):
 
-    def test_recursive_10_times_slower_than_memoized_with_number_28(self):
-        memoized_time = timeit("Memoized().fibonacci(28)", 
+    def test_recursive_10_times_slower_than_memoized_with_number_25(self):
+        memoized_time = timeit("Memoized().fibonacci(25)", 
             setup = "from fibonacci_memoized import Memoized", 
             number = 1)
 
-        recursive_time = timeit("Recursive().fibonacci(28)", 
+        recursive_time = timeit("Recursive().fibonacci(25)", 
             setup = "from fibonacci_recursive import Recursive", 
             number = 1)
 
