@@ -18,16 +18,20 @@ Use good design principles. After you're done with the coding part, answer the f
 
 1. What did you learn in this assignment?
 
-In this assignment the easiest portion was coding the algorithm, difficulty arose in the design. We learned that if not cautious how easily the DRY principle of design can be violated. The DRY principle does not just apply to methods. DRY principle can be violated for classes, objects, and tests.
-We also learned the use of memoization in design. Memoization is an efficient way to store the results obtained from a method previously called. When this method is called again that data will be obtained from the stored memory thus greatly reducing the time complexity.
+In this assignment the easiest portion was coding the algorithm. Difficulty arose in the design. The DRY principle can be easily violated if we are not actively planning. Also, the DRY principle does not just apply to our main program methods. DRY principle must also be followed for classes, objects, and tests.
+
+We also learned the use of memoization in design. Memoization is an efficient way to store the results obtained from a previous function call. When this method is called again, that data will be taken from the stored memory. Thus, memoization greatly reduces the time complexity of certain algorithms.
+
+We learnt about the use mixing inheritance in Python. Furthermore, we learned about certain characteristics of polymorphism in python. In memoization part, polymorphism had to be used in order to hijack and reuse the sum part of fibonacci recursive. We did not expect polymorphism to behave this way in python.
+
 
 2. What design principles did you use? List each one of them, discuss what this principle is, and give example(s) of where specifically you used it in this assignment.
 
 DRY - Don't repeat yourself.
-an example of this principle can be seen with the unit tests. For each algorithm there is one set of tests written that is used by the test class for each algorithm.
+An example of this principle can be seen with the unit tests. For each fibonacci algorithm, the same basic set of tests is is used to test that method. Therefore, we wrote a base set of tests, and had each fibonacci algorithm test inherits from this base.
 
 SRP - Single response principle.
-an example of this principle can be seen with each method. SRP can be applied to the different implementation of the same method. Each method has a distinctive implementation, along with abiding the DRY principle.
+An example of this principle can be seen with each method. SRP can be applied to the different implementation of the same method. Each method has a distinctive implementation, along with abiding the DRY principle.
 
-YAGNI-y - You aren't gonna need it yet.
-In the initial start of the project we had three different implementation on our hands. We needed to perform tests on the each implementation. We postponed recursive and memoized versions starting with the iterative version. Then performed test for the iterative version. At this point we needed to commit to writing the recursive version, and the pattern continues till memoized version's test is finished. Along this route we observed how if not observant, DRY and SRP can be violated.
+YAGNI - You aren't gonna need it yet.
+In the initial start of the project we had three different implementation on our hands. We needed to perform tests on the each implementation. We postponed recursive and memoized versions starting with the iterative version. Then tests are ran sucessfully for the iterative version. At this point the recursive version needs to be written, and the pattern continues till memoized version's test is finished. Since we delayed the implementation of recursive and memoized part, we knew more on how to write the latter more efficiently. Along this route we observed how if not observant, DRY and SRP can be violated.
