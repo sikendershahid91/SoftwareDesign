@@ -1,4 +1,4 @@
-class fibonacciTest(object):
+class fibonacciTest:
     def test_negative_position_throws_exception(self):
         self.assertRaises(ValueError, self.fibonacci, -1)
 
