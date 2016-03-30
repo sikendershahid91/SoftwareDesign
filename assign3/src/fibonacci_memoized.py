@@ -1,12 +1,11 @@
-def fibonacci_memoized(number):
-    if number < 0:
-        raise ValueError
+from fibonacci_recursive import Recursive
 
-    if number not in fibonacci_memoized.cache:
-        fibonacci_memoized.cache[number] = (
-            fibonacci_memoized(number - 2) + 
-            fibonacci_memoized(number - 1))
+class Memoized(Recursive):
 
-    return fibonacci_memoized.cache[number]
-
-fibonacci_memoized.cache = {0: 1, 1: 1}
+    def __init__(self):
+        self._cache = {}
+    
+    def fibonacci(self, number):
+        if number not in self._cache:
+            self._cache[number] = super().fibonacci(number)
+        return self._cache[number]
