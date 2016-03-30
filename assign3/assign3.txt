@@ -23,10 +23,10 @@ We also learned the use of memoization in design. Memoization is an efficient wa
 
 2. What design principles did you use? List each one of them, discuss what this principle is, and give example(s) of where specifically you used it in this assignment.
 
-DRY - Don't repeat yourself. 
+DRY - Don't repeat yourself.
 an example of this principle can be seen with the unit tests. For each algorithm there is one set of tests written that is used by the test class for each algorithm.
 
-SRP - Single response principle
+SRP - Single response principle.
 an example of this principle can be seen with each method. SRP can be applied to the different implementation of the same method. Each method has a distinctive implementation, along with abiding the DRY principle.
 
 YAGNI-y - You aren't gonna need it yet.
