@@ -1,3 +1,12 @@
+[Venkat 03/30/16 06:10 AM MDT]
+synopsis: nice work so far
+
+details:           
+Nice use of timeit function.
+
+Let's focus on answering assign3.txt questions.
+
+------------------------------------------------------------------------------
 [Venkat 03/29/16 06:08 AM MDT]
 synopsis: let's keep it DRY 
 
