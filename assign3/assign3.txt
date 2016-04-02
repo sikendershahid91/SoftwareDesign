@@ -35,3 +35,14 @@ An example of this principle can be seen with each method. SRP can be applied to
 
 YAGNI - You aren't gonna need it yet.
 In the initial start of the project we had three different implementation on our hands. We needed to perform tests on the each implementation. We postponed recursive and memoized versions starting with the iterative version. Then tests are ran sucessfully for the iterative version. At this point the recursive version needs to be written, and the pattern continues till memoized version's test is finished. Since we delayed the implementation of recursive and memoized part, we knew more on how to write the latter more efficiently. Along this route we observed how if not observant, DRY and SRP can be violated.
+
+Total [100]: 100
+
+Tests pass [20]:
+Coverage [10]:
+Test Quality [20]:
+Iterative Solution Quality [10]:
+Recursive Solution Quality [10]:
+Memoized Solution Quality [25]:
+Answers to questions [5]:
+
