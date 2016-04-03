@@ -7,6 +7,7 @@ REPLACE THIS WITH YOUR ANSWER
 Martin Fowler discusses the four rules of simple design by Kent Beck from Extreme Programming.
 In the priority of most significant to taking precedence over next are the following
 Passes the tests, Reveals intention, No duplication, and fewest elements.
-Passes the tests is most important because it's primary aim is to claim the software works as intended.
-Reveals intention is essentially self-documenting code, which eases readability of code and enables understanding of the programmer's intent.
-No duplication also known as the DRY principle. DRY defines don't repeat yourself. According to the article, elimination of duplicated code "is a powerful way to drive out good designs."
+"Passes the tests" is most important because it's primary aim is to claim the software works as intended.
+"Reveals intention" is essentially self-documenting code, which eases readability of code and enables understanding of the programmer's intent.
+"No duplication" also known as the DRY principle. DRY defines don't repeat yourself. According to the article, elimination of duplicated code "is a powerful way to drive out good designs."
+"Fewest elements" rule focuses on keeping the software where only minimal vital behavior performs. The issue of not abiding by this rule creates extra complexity and decrease the extensibility within the software.
