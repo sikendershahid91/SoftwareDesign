@@ -1,0 +1,7 @@
+[Venkat 04/05/16 05:42 AM PDT]
+synopsis: good so far 
+
+details:             
+Are there times when a rule may conflict with another. Can we think of an example situation. What to do when that happens?
+
+------------------------------------------------------------------------------
