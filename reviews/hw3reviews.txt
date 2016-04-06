@@ -1,3 +1,18 @@
+[Venkat 04/06/16 06:20 AM PDT]
+synopsis: write in short paragraphs 
+
+details:
+Avoid long paragraphs. When there are multiple thoughts, divide them into smaller paragraphs. For example, we can present the details of a rule in a paragraph. Then present one or more examples in smaller paragraphs.
+
+The first paragraph is long. It may really contain good details, but it has already scared or dissuaded me as a reader and tells me don't bother reading this or put this away for another time when you will have more patience.
+
+A good document should invite the reader and that first invitation comes from the structure.
+
+Break the first paragraph in to logical parts. Tell us in one paragraph what the rules is and the benefits. Then in additional paragraphs, provide supporting details and why this is something we should care about. Then in one or more paragraphs give examples...
+
+At the every end, write one or more paragraphs relating the rules and discussing any conflicts between them. Discuss how to deal with any conflicts.
+
+------------------------------------------------------------------------------
 [Venkat 04/05/16 05:42 AM PDT]
 synopsis: good so far 
 
