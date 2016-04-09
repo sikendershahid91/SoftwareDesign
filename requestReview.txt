@@ -1,3 +1,6 @@
 You may request for reviews as many times as you like. A review will be provided within 24 hours of your request. Any review requests made within 48 hours before the deadline may not receive any reviews.
 
-Reviews for hw3 is now closed. Assign4 will be posted on Friday.
+An automated script scans this file, Venkat does not view this file - don't put any notes for him here.
+
+Ready for review? Remove no from the next line and check this file in.
+no

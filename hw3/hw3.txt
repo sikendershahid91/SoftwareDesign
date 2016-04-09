@@ -33,3 +33,5 @@ Rules may conflict with another, there is a case that Fowler describes which con
 Conclusion
 
 Following these rules of simple design improve code in any design or paradigm. These rules set a guide for software design. Design is not a matter of taste rather it is of simplicity. These rules are generally applicable to any application for agile development.
+
+Total [10]: 10
