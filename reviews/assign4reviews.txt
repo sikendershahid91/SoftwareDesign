@@ -1,0 +1,7 @@
+[Venkat 04/10/16 07:28 AM MDT]
+synopsis: let's change focus 
+
+details:                    
+Would be better to start with the design of a block instead of the processing unit.
+
+------------------------------------------------------------------------------
