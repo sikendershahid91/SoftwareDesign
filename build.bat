@@ -1,4 +1,4 @@
 set path=C:\programs\python\Python35-32;%PATH%
-cd assign3
+cd assign4
 call paver
 exit %ERRORLEVEL%
