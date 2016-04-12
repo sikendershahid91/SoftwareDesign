@@ -1,3 +1,15 @@
+[Venkat 04/12/16 06:08 AM MDT]
+synopsis: let's use parameterized tests 
+
+details:                               
+If we change 'a': 'a' to 'a': '' and also change '1': '1' to '1': ''
+notice the test failure reports one failure instead of two. 
+
+Let's use parameterized tests so we can use a similar approach to what we have now, but it will report multiple failures when there are multiple failures.
+
+Then move on to design a few more blocks.
+
+------------------------------------------------------------------------------
 [Venkat 04/11/16 06:01 AM MDT]
 synopsis: let's start with a concrete class instead of base 
 
