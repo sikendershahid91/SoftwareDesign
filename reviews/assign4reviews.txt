@@ -1,3 +1,10 @@
+[Venkat 04/13/16 07:00 AM MDT]
+synopsis: good so far, please move forward. 
+
+details:                                   
+Please proceed to design a few more blocks.
+
+------------------------------------------------------------------------------
 [Venkat 04/12/16 06:08 AM MDT]
 synopsis: let's use parameterized tests 
 
