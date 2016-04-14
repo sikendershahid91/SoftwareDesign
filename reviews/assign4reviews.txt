@@ -1,3 +1,10 @@
+[Venkat 04/14/16 06:36 AM MDT]
+synopsis: please move forward 
+
+details:                     
+Good so far. Please move forward to design the remaining blocks.
+
+------------------------------------------------------------------------------
 [Venkat 04/13/16 07:00 AM MDT]
 synopsis: good so far, please move forward. 
 
