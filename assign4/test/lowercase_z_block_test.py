@@ -1,6 +1,6 @@
 import unittest
 from nose_parameterized import parameterized
-from src.z_block import zBlock
+from src.lowercase_z_block import zBlock
 
 
 class zBlockTest(unittest.TestCase):
