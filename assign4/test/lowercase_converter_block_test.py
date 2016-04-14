@@ -23,4 +23,3 @@ class LowerCaseConverterBlockTest(unittest.TestCase):
             ['#', '#']])
     def test_process(self, input_char, expected_char):
         self.assertEqual(self.test_block.process(input_char), expected_char)
-
