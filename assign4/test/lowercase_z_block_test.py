@@ -14,6 +14,6 @@ class zBlockTest(unittest.TestCase):
             ['a', 'a'],
             ['b', 'b'],
             ['1', '1'],
-            ['z', None]])
+            ['z', None]]) #Venkat: Should be '' instead of None
     def test_process(self, input_char, expected_char):
         self.assertEqual(self.test_block.process(input_char), expected_char)
