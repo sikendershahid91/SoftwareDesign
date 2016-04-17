@@ -1,6 +1,6 @@
-class ZBlock:
+class kBlock:
     def process(self, input):
-        if input != 'Z':
+        if input != 'k':
             return input
-        else:
+        else: 
         	return ''
