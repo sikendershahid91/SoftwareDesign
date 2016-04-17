@@ -7,4 +7,5 @@ class userdefinedCharBlock:
         if input == self._char:
             return ''
         else:
-            return input
+            return input      
+   #Venkat: Shorten to one line of code in this function.

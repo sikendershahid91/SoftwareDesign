@@ -2,7 +2,7 @@ import unittest
 from nose_parameterized import parameterized
 from src.lowercase_k_block import kBlock
 
-class kBlockTest(unittest.TestCase):
+class kBlockTest(unittest.TestCase):   #Venkat: Remove
 
 	@parameterized.expand([
 		['b', 'b'],

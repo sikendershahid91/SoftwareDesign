@@ -3,7 +3,7 @@ from nose_parameterized import parameterized
 from src.uppercase_z_block import ZBlock
 from src.lowercase_z_block import zBlock
 
-class zBlockTest(unittest.TestCase):
+class zBlockTest(unittest.TestCase): #Venkat: Remove
 
     @parameterized.expand([
     		['A', 'A'],

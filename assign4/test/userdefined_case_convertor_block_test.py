@@ -3,7 +3,7 @@ from nose_parameterized import parameterized
 from src.userdefined_case_convertor_block import userdefinedCaseConvertorBlock
 
 
-class userDefinedCaseConvertorTest(unittest.TestCase):
+class userDefinedCaseConvertorTest(unittest.TestCase): #Venkat: Remove
 
     @parameterized.expand([
             ['b', 'A', 'A'],

@@ -2,7 +2,7 @@ import unittest
 from nose_parameterized import parameterized
 from src.userdefined_multiplier_block import userdefinedMultiplierBlock
 
-class userdefinedMultiplierBlockTest(unittest.TestCase):
+class userdefinedMultiplierBlockTest(unittest.TestCase):  #Venkat: Remove
 
     def setUp(self):
         self.test_block = userdefinedMultiplierBlock()

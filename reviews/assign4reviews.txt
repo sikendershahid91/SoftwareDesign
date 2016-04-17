@@ -1,3 +1,16 @@
+[Venkat 04/17/16 17:36 PM CEST]
+synopsis: keep it DRY. Consider YAGNI. Keep fewer elements.
+
+details:
+userdefinedCaseConvertorBlock: Remove, YAGNI.
+
+userdefinedMultiplierBlock: Remove, YAGNI.
+
+userdefinedCharBlock: Renamed as CharBlocker. Keep this and remove kBlock, zBlock, and ZBlock.
+
+After fixing these, please move to the design of the processing unit.                       
+
+------------------------------------------------------------------------------
 [Venkat 04/15/16 05:21 AM MDT]
 synopsis: keep it DRY. 
 

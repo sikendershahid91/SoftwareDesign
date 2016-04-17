@@ -6,6 +6,14 @@ class userdefinedCharBlockTest(unittest.TestCase):
 
     def setUp(self):
         self.test_block = userdefinedCharBlock()
+                               
+#Venkat: we need the following:
+#toblock, input, expected
+#'Z', 'Z', ""
+#'Z', 'z', "z"
+#'Z', 'k', "k"
+#'Z', '1', "1"
+#'k', 'k', ""
 
     @parameterized.expand([
             ['b', 'A', 'A'],
