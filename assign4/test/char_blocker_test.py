@@ -5,7 +5,7 @@ from src.char_blocker import CharBlock
 class CharBlockTest(unittest.TestCase):
 
     def setUp(self):
-        self.test_block = CharBlock()
+        self.test_block = CharBlock(char = '')
 
     @parameterized.expand([
             ['Z', 'Z', ''],

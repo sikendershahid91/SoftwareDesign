@@ -1,7 +1,15 @@
+from functools import reduce
+
 class ProcessingUnit:
     def __init__(self):
-        block_char = CharBlock()
+        self._blocks = None
 
-    def char_blocker(self, blocking_char, input_char):
-        block_char.case_setup(blocking_char)
-        block_char.process(input_char)
+    def set_blocks(self, input_blocks):
+    	self._blocks = input_blocks
+
+    def process(self, input_string):
+    	return reduce(
+    		lambda string, block: ''.join(map(block.process, string)),
+    		self._blocks,
+    		input_string
+    		)
