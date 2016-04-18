@@ -9,7 +9,6 @@ class UpperCaseConverterBlockTest(unittest.TestCase):
     def setUp(self):
         self.test_block = UpperCaseConverterBlock()
 
-
     @parameterized.expand([
             ['A', 'A'],
             ['B', 'B'],
