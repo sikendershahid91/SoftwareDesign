@@ -4,8 +4,6 @@ from src.char_blocker import CharBlock
 
 class CharBlockTest(unittest.TestCase):
 
-    def setUp(self):
-        self.test_block = CharBlock(char = '')
 
     @parameterized.expand([
             ['Z', 'Z', ''],
@@ -13,6 +11,6 @@ class CharBlockTest(unittest.TestCase):
             ['Z', 'k', 'k'],
             ['z', '1', '1'],
             ['k', 'k', '']])
-    def test_userdefined_process(self, userdefined_char_case, input_char, expected_char):
-        self.test_block.case_setup(userdefined_char_case)
-        self.assertEqual(self.test_block.process(input_char), expected_char)
+    def test_userdefined_process(self, defined_char_case, input_char, expected):
+        self.test_block = CharBlock(defined_char_case)
+        self.assertEqual(self.test_block.process(input_char), expected)
