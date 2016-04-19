@@ -1,5 +1,5 @@
 class CharBlock:
-    def __init__(self, char = ''):
+    def __init__(self, char = ''): #Venkat: Remove = ''
         self._char = char
 
     def case_setup(self, input_char):

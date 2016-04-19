@@ -1,3 +1,10 @@
+[Venkat 04/19/16 04:53 AM CEST]
+synopsis: nice work so far. Please move forward. 
+
+details:                                        
+Looks good. Please move forward.
+
+------------------------------------------------------------------------------
 [Venkat 04/17/16 17:36 PM CEST]
 synopsis: keep it DRY. Consider YAGNI. Keep fewer elements.
 
