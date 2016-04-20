@@ -1,10 +1,5 @@
 from functools import reduce
-from src.multiplier_block import MultiplierBlock
-from src.lowercase_converter_block import LowerCaseConverterBlock
-from src.uppercase_converter_block import UpperCaseConverterBlock
-from src.char_blocker import CharBlock
                       
-#Venkat: The above imports tell us that this file fails OCP. If we add another block we have to change the above imports.
 
 class ProcessingUnit:
 
@@ -21,25 +16,19 @@ class ProcessingUnit:
     	)
         
 
-#Venkat: This function fails OCP, we have to change this if we add another block
     @classmethod
-    def string_to_block_parser(cls, string):
-        splited_string = string.split('-')
-        if string == 'UpperCaseConverter':
-            return UpperCaseConverterBlock()
-        elif string == 'LowerCaseConverter':
-            return LowerCaseConverterBlock()
-        elif string == 'Multiplier':
-            return MultiplierBlock()
-        elif len(splited_string) == 2 and splited_string[1] == 'blocker':
-            return  CharBlock(string.split('-')[0])
+    def block_parser(cls, available_blocks, string):
+        for block in available_blocks:
+            output_block = block.handle_string(string)
+            if output_block:
+                return output_block
         raise ValueError('Unable to parse block type from {}'.format(string))
 
 
     @classmethod
-    def from_string_factory(cls, string_of_blocks):
+    def from_string_factory(cls, available_blocks, string_of_blocks):
         unit = cls(list(map(
-            cls.string_to_block_parser,
+            lambda string: cls.block_parser(available_blocks, string),
             string_of_blocks.split(' - '))))
         
         return unit

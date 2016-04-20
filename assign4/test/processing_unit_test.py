@@ -11,6 +11,11 @@ from src.char_blocker import CharBlock
 class ProcessingUnitTest(unittest.TestCase):
 
 
+    def setUp(self):
+        self.present_blocks = [LowerCaseConverterBlock, 
+           UpperCaseConverterBlock, MultiplierBlock, CharBlock]
+
+
     @parameterized.expand([
             [[UpperCaseConverterBlock(), CharBlock('Z')], 
                'abczz', 
@@ -31,9 +36,9 @@ class ProcessingUnitTest(unittest.TestCase):
         ['UpperCaseConverter', UpperCaseConverterBlock],
         ['LowerCaseConverter', LowerCaseConverterBlock],
         ['Multiplier', MultiplierBlock]])
-    def test_string_to_block_parser_without_blocker(self, string, block_type):
+    def test_block_parser_without_char_blocker(self, string, block_type):
         self.assertTrue(isinstance(
-            ProcessingUnit.string_to_block_parser(string),
+            ProcessingUnit.block_parser(self.present_blocks, string),
             block_type))
 
 
@@ -41,8 +46,8 @@ class ProcessingUnitTest(unittest.TestCase):
         ['Z-blocker', 'Z'],
         ['z-blocker', 'z'],
         ['k-blocker', 'k']])
-    def test_string_to_block_parser_with_char_block(self, string, blocked_char):
-        output_block = ProcessingUnit.string_to_block_parser(string)
+    def test_block_parser_with_char_block(self, string, blocked_char):
+        output_block = ProcessingUnit.block_parser(self.present_blocks, string)
         self.assertTrue(isinstance(output_block, CharBlock) and 
             output_block._char == blocked_char)
 
@@ -53,15 +58,15 @@ class ProcessingUnitTest(unittest.TestCase):
         'lowercaseConverter'])
     def test_string_to_block_parser_raises_value_error(self, string):
         self.assertRaises(ValueError, 
-            ProcessingUnit.string_to_block_parser, string)
+            ProcessingUnit.block_parser, self.present_blocks, string)
 
 
     def test_from_string_factory(self):
         processing_unit = ProcessingUnit.from_string_factory(
+            self.present_blocks,
             'UpperCaseConverter - Z-blocker - LowerCaseConverter')
 
-        expected_block_type_sequence = [UpperCaseConverterBlock, 
-            CharBlock, 
+        expected_block_type_sequence = [UpperCaseConverterBlock, CharBlock, 
             LowerCaseConverterBlock]
 
         self.assertTrue(map(
