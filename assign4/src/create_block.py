@@ -1,6 +1,6 @@
 from importlib import import_module
 
-def create_block(string): #Venkat: create_block
+def create_block(string):
     file_name, class_name, *parameters = string.split()
 
     imported_module = import_module(file_name)
