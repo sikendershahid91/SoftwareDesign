@@ -1,0 +1,5 @@
+char_blocker CharBlock a
+char_blocker CharBlock b
+multiplier_block MultiplierBlock
+uppercase_converter_block UpperCaseConverterBlock
+lowercase_converter_block LowerCaseConverterBlock

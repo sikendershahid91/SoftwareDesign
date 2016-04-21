@@ -1,5 +1,5 @@
 from functools import reduce
-                      
+
 
 class ProcessingUnit:
 
@@ -14,5 +14,3 @@ class ProcessingUnit:
     	  self._blocks,
     	  input_string
     	)
-
-
