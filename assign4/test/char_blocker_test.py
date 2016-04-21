@@ -15,13 +15,3 @@ class CharBlockTest(unittest.TestCase):
         self.test_block = CharBlock(defined_char_case)
         self.assertEqual(self.test_block.process(input_char), expected)
 
-
-    @parameterized.expand([
-            ['Z-blocker', (CharBlock, 'Z')],
-        	['z-blocker', (CharBlock, 'z')],
-            ['a--blacker', None]])
-    def test_handle_string(self, string, expected):
-        answer = CharBlock.handle_string(string)
-        self.assertTrue(
-        	(answer == expected) or
-            (isinstance(answer, expected[0]) and answer._char == expected[1]))
