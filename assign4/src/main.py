@@ -1,5 +1,4 @@
 from processing_unit import ProcessingUnit
-from create_block import create_block
 from block_file_handle import block_file_handle
 import sys
 

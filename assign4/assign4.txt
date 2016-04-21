@@ -1,7 +1,7 @@
 Assign4: Due 11:59PM April 22
 
 In this assignment we will design a logical characters processing unit. The processing unit will receive a series of characters as input and produce a series of characters as output. The unit may house any number of processing blocks. Not all blocks that are available may be used when creating a processing unit. Also, a block may be used more than once. The order in which the blocks are used may also vary.
-                                                            
+
 
 		...input... -> | block1 block2 block3 ... | -> ...output...
                          processing unit
@@ -13,7 +13,7 @@ Let's discuss some examples of blocks and then revisit the processing unit.
 
 2. LowerCaseConverter Block
 	Given a character, this block will send out or return the character in lowercase.
-	
+
 3. Multiplier Block
   Given a character, this block will send out or return two of the same character. For example, if it received 'a', it will produce 'aa'. If it receives '1', it will produce '11'.
 
@@ -22,7 +22,7 @@ Let's discuss some examples of blocks and then revisit the processing unit.
 
 5. Z-blocker Block
 	This block will not return or produce an output if the character given is an uppercase 'Z'.
-	
+
 6. k-blocker Block
    This block will not return or produce an output if the character given is lowercase 'k'.
 
@@ -32,7 +32,7 @@ The end user should be able to create a processing unit using a series of blocks
 
 For example, a user may create a processing unit with the following series of blocks:
 	UpperCaseConverter - Z-blocker - LowerCaseConverter
-	
+
 After creating this processing unit, if a user were to send the following series of characters to the unit:
 
 	11abcdabcdabcdzzaazzabcd
@@ -42,7 +42,7 @@ it will return the following output:
 	11abcdabcdabcdaaabcd
 
 In addition to designing a few sample blocks and the processing unit, we will create a console based driver program.
-	
+
 Design the program in such a way that
 1. A user can specify the blocks available for use before the program starts. This should include pre-defined blocks and user created blocks.
 
@@ -54,12 +54,22 @@ After completing the assignment answer these questions:
 
 1. What did you learn in this assignment?
 
-REPLACE THIS WITH YOUR ANSWER
+In this assignment we practiced the different design principles. Many times there were the case where we overlooked one or two principles. Through reviews and discussion we learned to realize a program which correctly followed the principles. Most importantly we learned how to use the design patterns to communicate the design plan for this assignment.
 
 2. What design principles did you use? List each one of them, discuss what this principle is, and give example(s) of where specifically you used it in this assignment.
 
-REPLACE THIS WITH YOUR ANSWER
+SRP - single responsibility principle. This principle can be observed through the file directory. Each python file contains a class which is has one specific responsibility.
 
-2. What design patterns did you use? List each one of them, discuss what this pattern is, and give example(s) of where specifically you used it in this assignment.
+DRY - don't repeat yourself. When starting the assignment, initially we were to create 'Z', 'z', 'k', and user specified character blockers. We originally had create a class method for each of the blockers specified. Then noticing we had violated the DRY principle. In practicality we only really needed on class method that would perform the task of each character blocking unit. The specified character's would essentially use the same method. The interface would use the same process as where the user defines the character.
 
-REPLACE THIS WITH YOUR ANSWER
+YAGNI - you aren't gonna need it yet. When starting of the program we tackled all the blocks in one sitting. The result of that action ended up in a big conundrum. After literally deleting everything and being advised to take small steps, we focused on each block bit by bit.
+
+OCP - open closed principle. This principle required ample practice with many trial and error for the ideology to be engraved into our brain. OCP can mainly be seen in the processing_unit.py. If we were to add another type of character processing block, we will not need to modify the procesing_unit. If we needed to make changes on specific blocks because a requirement had been changed we still would not need to modify the processing_unit.
+
+3. What design patterns did you use? List each one of them, discuss what this pattern is, and give example(s) of where specifically you used it in this assignment.
+
+We used 2 creational design patterns to communicate our idea. The Builder pattern and the Abstract factory pattern.
+
+The Builder pattern was used to realize the file handling and directing a system to create such blocks that were required. We however did not develop the builder pattern such as creating a director and a builder, where the other classes are derived from builder. In our case we a class that would retrieve the file with information. This information would use a class that would create the sequential order of the class objects that would essentially worked like a director from the pattern. Then processing unit would use delegation processing the respective objects which worked similarly like the builder.
+
+Abstract factory pattern was communicated to bring about the processing unit. We were bit confused on how would we create the different blocks without violating the OCP. This is when the abstract factory patter was discussed. Abstract factory which is at the object scope and delegates similar method to different classes with same objective. Slight different then the actual pattern, we used the processing unit to delegate similar method to different classes with different objective.

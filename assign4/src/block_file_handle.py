@@ -1,4 +1,3 @@
-from processing_unit import ProcessingUnit
 from create_block import create_block
 
 
@@ -7,4 +6,3 @@ def block_file_handle(file_path):
         input_string = file.read().splitlines()
 
     return list(map(create_block, input_string))
-
