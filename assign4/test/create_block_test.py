@@ -6,23 +6,23 @@ from src.lowercase_converter_block import LowerCaseConverterBlock
 from src.uppercase_converter_block import UpperCaseConverterBlock
 from src.char_blocker import CharBlock
 
-from src.block_create import block_create
+from src.create_block import create_block
 
 
 class BlockCreateTest(unittest.TestCase):
 
     @parameterized.expand([
-        ['multiplier_block MultiplierBlock', 
+        ['multiplier_block MultiplierBlock',
             MultiplierBlock()],
-        ['lowercase_converter_block LowerCaseConverterBlock', 
+        ['lowercase_converter_block LowerCaseConverterBlock',
             LowerCaseConverterBlock()],
-        ['uppercase_converter_block UpperCaseConverterBlock', 
+        ['uppercase_converter_block UpperCaseConverterBlock',
             UpperCaseConverterBlock()],
         ['char_blocker CharBlock z', CharBlock('z')],
         ['char_blocker CharBlock Z', CharBlock('Z')],
         ['char_blocker CharBlock a', CharBlock('a')] ])
     def test_created_block_successful_same_behavior(self, string, expected):
         chars = ['a', 'b', 'y', 'Y', 'Z', '#']
-        created = block_create(string)
-        self.assertTrue(False not in 
+        created = create_block(string)
+        self.assertTrue(False not in
             [expected.process(char) == created.process(char) for char in chars])
