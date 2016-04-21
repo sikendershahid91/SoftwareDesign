@@ -1,3 +1,12 @@
+[Venkat 04/21/16 06:08 AM CEST]
+synopsis: nice progress 
+
+details:               
+Good so far.
+
+Remember to answer questions in assign4.txt.
+
+------------------------------------------------------------------------------
 [Venkat 04/20/16 06:39 AM CEST]
 synopsis: honor OCP 
 

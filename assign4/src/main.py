@@ -3,6 +3,8 @@ from block_create import block_create
 import sys
 
 
+#Venkat: This file should only contain one small main function. Everything else in other files, well tested.
+
 def get_blocks(file_path):
     with open(file_path) as file:
         input_string = file.read().splitlines()
