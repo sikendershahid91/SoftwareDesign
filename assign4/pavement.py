@@ -8,6 +8,15 @@ import shutil
 
 
 @task
+def run():
+    if os.name == 'nt':
+        sh('py -3 src/main.py')
+    else:
+        sh('python3 src/main.py')
+    pass
+
+
+@task
 def test():
     sh('nosetests --with-coverage --cover-erase --cover-package=src --cover-html test')
     pass
@@ -23,6 +32,6 @@ def clean():
 
 
 @task
-@needs(['clean', 'test'])
+@needs(['clean', 'test', 'run'])
 def default():
 	pass
