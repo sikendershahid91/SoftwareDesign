@@ -5,14 +5,14 @@ import paver.doctools
 import os
 import glob
 import shutil
-
+import subprocess
 
 @task
 def run():
     if os.name == 'nt':
-        sh('py -3 src/main.py')
+        os.system("start cmd /K py -3 src/main.py")
     else:
-        sh('python3 src/main.py')
+        subprocess.call(['xterm', '-e', 'python3 src/main.py'])
     pass
 
 
@@ -32,6 +32,6 @@ def clean():
 
 
 @task
-@needs(['clean', 'test'])
+@needs(['clean', 'test', 'run'])
 def default():
 	pass
