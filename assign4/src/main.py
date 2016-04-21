@@ -9,7 +9,7 @@ def get_blocks(file_path):
     with open(file_path) as file:
         input_string = file.read().splitlines()
 
-    return list(map(block_create, input_string))
+    return list(map(create_block, input_string))
 
 
 def main():
