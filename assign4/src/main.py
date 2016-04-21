@@ -1,5 +1,5 @@
 from processing_unit import ProcessingUnit
-from block_create import block_create
+from create_block import create_block
 import sys
 
 
@@ -15,7 +15,7 @@ def get_blocks(file_path):
 def main():
     file_name = 'user_blocks.txt'
     blocks = get_blocks(sys.path[0] + '/' + file_name)
-    
+
     print('Block sequence loaded from {}'.format(file_name))
     process_unit = ProcessingUnit(blocks)
 
