@@ -1,3 +1,15 @@
+[Venkat 04/22/16 05:20 AM CEST]
+synopsis: nice work 
+
+details:
+Error on run:
+xterm: Xt error: Can't open display: /private/tmp/com.apple.launchd.kSKF3i1DAk/org.macosforge.xquartz:0
+
+Simply run the program. Key in a few sample without needing user input.
+
+See notes in assign4.txt.         
+    
+------------------------------------------------------------------------------
 [Venkat 04/21/16 06:08 AM CEST]
 synopsis: nice progress 
 
