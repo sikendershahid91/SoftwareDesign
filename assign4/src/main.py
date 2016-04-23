@@ -16,7 +16,7 @@ def main():
     if demo_inputs:
         print('\nDemo mode in use.\n')
         for line in demo_inputs:
-            print("String for process :: " + line, end = '')
+            print("String for process :: " + line)
             print(process_unit.process(line))
     else:
         while True:
