@@ -80,4 +80,13 @@ Abstract factory pattern was communicated to bring about the processing unit. We
 
 Prototype pattern which is similar to the factory method pattern can be observed in this assignment. Using python it we were easily able to realize the prototype pattern. The processing_unit is essentially independent of how the different blocks are created or used. We avoided inheritance of any type thus avoiding any class hierarchy. The processing_unit also holds ideologies of the façade pattern. Processing_unit is also similar to the use of the façade pattern in the sense it controls the use of the underlying classes and does not encapsulate them. If we like to edit or use a class separately from this character processing class, we have the freedom to do so.
 
-Grading postponed, waiting for paring evaluation from: nguyen
+Total [100]: 98
+
+Program works [20]:
+Tests pass [20]:
+Coverage [10]:
+Design Quality [20]:
+Code Quality [10]:
+Works for user defined converter [10]:
+Response to questions in assign4.txt [10]: -2
+A few other patterns: iterator, decorator,...?
