@@ -10,10 +10,11 @@ import subprocess
 @task
 def run():
     if os.name == 'nt':
-        os.system("start cmd /K py -3 src/main.py")
+        sh('py -3 src/main.py')
     else:
-        subprocess.call(['xterm', '-e', 'python3 src/main.py'])
+        sh('python3 src/main.py')
     pass
+
 
 
 @task
