@@ -72,10 +72,12 @@ OCP - open closed principle. This principle required ample practice with many tr
 
 3. What design patterns did you use? List each one of them, discuss what this pattern is, and give example(s) of where specifically you used it in this assignment.
 
-We used 2 creational design patterns to communicate our idea. The Builder pattern and the Abstract factory pattern.
+We used 2 creational design patterns to communicate our idea. The Builder pattern, Abstract factory pattern and the protype pattern.
 
 The Builder pattern was used to realize the file handling and directing a system to create such blocks that were required. We however did not develop the builder pattern such as creating a director and a builder, where the other classes are derived from builder. In our case we a class that would retrieve the file with information. This information would use a class that would create the sequential order of the class objects that would essentially worked like a director from the pattern. Then processing unit would use delegation processing the respective objects which worked similarly like the builder.
 
-Abstract factory pattern was communicated to bring about the processing unit. We were bit confused on how would we create the different blocks without violating the OCP. This is when the abstract factory patter was discussed. Abstract factory which is at the object scope and delegates similar method to different classes with same objective. Slight different then the actual pattern, we used the processing unit to delegate similar method to different classes with different objective. [Venkat: The language greatly changes how this pattern is used. Discuss that here how this pattern was actually used.]
+Abstract factory pattern was communicated to bring about the processing unit. We were bit confused on how would we create the different blocks without violating the OCP. This is when the abstract factory pattern was discussed. Abstract factory which is at the object scope and delegates similar method to different classes with same objective. Slight different then the actual pattern, we used the processing unit to delegate similar method to different classes with different objective. This pattern essentially gave a direction on how we could use polymorphorism to implement the usage of different character processing blocks. It differs from how the pattern describes the steps required to implement this specific pattern. We implemented the general idea where similar blocks are constructed through a same relation. Using python language which is dynamically typed. We avoided the creation of the an actual abstract method that is commonly seen in strongly typed languages. 
+
+Protype pattern which is similar to the factory method pattern can be observed in this assignment. 
                                            
 [Venkat: There were at least two or three more patterns used...]
