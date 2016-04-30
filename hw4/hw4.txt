@@ -14,8 +14,19 @@ When given a task, a software engineer usually needs time to totally figure out.
 
 In general, the SOLID (single responbility, open closed, Liskov substitution, and dependecy inversion) principles of object-oriented programming should be followed closely. These principles allow you to feel the bad smells of the code, and guide you to fix it.
 
-Programming patterns are some good ways to create code, and communicate the coding ideas you have. However, you should not blindly use patterns. When learning a new pattern, you work on a few examples to get a feel of how it works. When you deal with a problem, you will be able to think of several possible patterns and how to modify them.
+Programming patterns are some good ways to design code, and communicate the design ideas you have. However, you should not blindly use patterns. When learning a new pattern, you work on a few examples to get a feel of how it works. When you deal with a problem, you will be able to think of several possible patterns and how to modify them.
 
 2. What are some of the general guidelines you would follow when designing?
 
-When start writing code for a program, you start with a canary to make sure the environments are set up.
+When writing a program, we start about the most important component of the code. First, we write a small canary test to make sure the environment is properly set up.
+
+Then we write a test for the code we want. Only after we create the test, we write the code. Initially, the code should do simple things to pass the test. Before we expand the functionality of the code, we usually need to write the tests first.
+
+Don't Repeat Yourself is good guideline to follow. As the code expands, we need to constantly refactor. Look at the code we created, see which ones we really need, remove unneccessary ones. Usuually, long methods are rotten, so we divide it into smaller functions. If somes code seems to repeat itself,Also, methods and variables names should be easy to to understand, not short, and obscure.
+
+Don't use too many outside libraries. As time progresses, the outdated libraries will create errors inside your code.
+
+
+
+
+
