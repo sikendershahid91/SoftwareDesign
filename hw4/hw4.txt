@@ -16,19 +16,18 @@ When given a task, a software engineer needs to evaluate the problem and take st
 
 Programming patterns are some good ways to create code, and communicate the coding ideas you have. However, you should not blindly use patterns. When learning a new pattern, you work on a few examples to get a feel of how it works. When you deal with a problem, you will be able to think of several possible patterns and how to modify them based on what had been observed. Design patterns are not there to be followed and rewritten, more so be discussed if a certain feature in the pattern is quite relevant.
 	 
-In summary, the SOLID (single reasonability, open closed, Liskov substitution, and dependency inversion) principles of object-oriented design and should be evaluated for frequently. These principles allow you to feel and observe the bad smells of the code, and promote you to solve it based on the principles which are there to guide you to the right software design route.
+In summary, the SOLID (single readability, open closed, Liskov substitution, and dependency inversion) principles of object-oriented design and should be evaluated for frequently. These principles allow you to feel and observe the bad smells of the code, and promote you to solve it based on the principles which are there to guide you to the right software design route.
 
 2. What are some of the general guidelines you would follow when designing?
 
-When writing a program, we start about the most important component of the code. First, we write a small canary test to make sure the environment is properly set up.
+Starting of a design, we would initially start of with a coarse-grained strategic design. Discussing what we think the architecture of the software looks like. Discussing what are the required classes for our design. This all can be simply done on a piece of paper.
 
-Then we write a test for the code we want. Only after we create the test, we write the code. Initially, the code should do simple things to pass the test. Before we expand the functionality of the code, we usually need to write the tests first.
+When starting the program, it is great practice to perform TDD. When writing the program it would be essential to start of with the mist important yet silly test. This is the canary test to make sure the environment is properly set up.
 
-Don't Repeat Yourself is good guideline to follow. As the code expands, we need to constantly refactor. Look at the code we created, see which ones we really need, remove unneccessary ones. Usuually, long methods are rotten, so we divide it into smaller functions. If somes code seems to repeat itself,Also, methods and variables names should be easy to to understand, not short, and obscure.
+Then we write a test for the code we want. Only after we create the test, we write the code. Initially, the code can do simple things to pass the test which will allow the basic elements of the software to be built. As the process of writing a test, allowing the test to fail, then correcting the test we expand the behavior of the code. This cycle that is followed is called Test Driven Development (TDD).
 
-Don't use too many outside libraries. As time progresses, the outdated libraries will create errors inside your code.
+Don't Repeat Yourself is good guideline to follow. As the code expands, we need to constantly refactor. Look at the code we created, see which ones we really need, remove unnecessary ones. Usually, long methods are rotten, so we divide it into smaller functions. If some code seems to repeat itself continuously then this code is often needed thus can be refactored to method that can be used. 
 
+A good style of programing is to write a self-documenting code. little things such as the names of methods and variables can impact the readability of a software. A good guideline would be to select meaningful names for the Methods and variables. They should be easy to to understand, not short, and obscure.
 
-
-
-
+Don't use too many outside libraries. As time progresses, the outdated libraries will create errors inside your code. It is good practice to create an equal balance of the interfaces and concrete classes. The rule of thumb is to use the distance equation to allow the software to be very close to 0.2.
