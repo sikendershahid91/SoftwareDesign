@@ -31,3 +31,5 @@ Don't Repeat Yourself is good guideline to follow. As the code expands, we need 
 A good style of programing is to write a self-documenting code. little things such as the names of methods and variables can impact the readability of a software. A good guideline would be to select meaningful names for the Methods and variables. They should be easy to to understand, not short, and obscure.
 
 Don't use too many outside libraries. As time progresses, the outdated libraries will create errors inside your code. It is good practice to create an equal balance of the interfaces and concrete classes. The rule of thumb is to use the distance equation to allow the software to be very close to 0.2.
+
+Total [10]: 10
